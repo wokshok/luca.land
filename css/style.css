@@ -47,7 +47,6 @@ html {
           transform-origin: 50% 50% 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  transform-box: fill-box; 
 }
 
 @-webkit-keyframes girotondo {
