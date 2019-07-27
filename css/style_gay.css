@@ -16,15 +16,14 @@ html {
 	border-left: 0.8em solid Black;
 
 	top: 4em;
-	left: 2.8em;
 }
 
 #U {
 	width: 3em;
 	height: 3em;
-	border-left: 0.8em solid Black;
-	border-bottom: 0.8em solid Black;
-	border-right: 0.8em solid Black;
+	border-left: 0.8em solid #e70000;
+	border-bottom: 0.8em solid #e70000;
+	border-right: 0.8em solid #e70000;
 	border-bottom-right-radius: 1.5em;
 	border-bottom-left-radius: 1.5em;
 
@@ -43,12 +42,18 @@ html {
 	box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  margin: 100px auto;
+}
+
 @keyframes girotondo {
   20% {
     top: 0;
     left: 2em;
   	transform: rotate(90deg);
   	transform-origin: 50% 50% 0;
+    border-color: #ff8c00;
   	
   }
   21% {
@@ -62,6 +67,7 @@ html {
   	left: 2em;
   	transform-origin: 100% 0% 0;
   	transform: rotate(125deg);
+    border-color: #ffef00;
   }
   32% {
   	top: 3em;
@@ -89,6 +95,7 @@ html {
   	left: 8em;
   	transform: rotate(210deg);
   	animation-timing-function: ease-in;
+    border-color: #00811f;
   }
   62% {
   	top: 3em;
@@ -109,6 +116,7 @@ html {
   	transform-origin: 0% 0% 0;
   	left: 8em;
   	transform: rotate(180deg);
+    border-color: #0044ff;
   }
   74% {
   	top: 3em;
@@ -126,6 +134,7 @@ html {
   	left: 2em;
   	transform-origin: 50% 50% 0;
   	top: 0;
+    border-color: #760089;
   }
 }
 
@@ -142,9 +151,6 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
-    #L {
-      left: 4.8em;
-    }
 
     html {
       font-size: 12px;
