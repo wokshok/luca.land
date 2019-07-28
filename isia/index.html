@@ -13,9 +13,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="../css/normalize.css">
@@ -26,6 +23,10 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -40,13 +41,50 @@
     </a>
 
     <div class="row">
-      <div class="column" style="margin-top: 25%">
-        <h5 style="text-align: center;">I'm working on this, I swear.</h5>
+      <h2>Bachelor's Degree videos</h2>
+    </div>
+
+    <div class="gallery" id="exhibition">
+      <div class="gallery_column">
+        <div class="vid-wrapper"><div style="padding:100% 0 0 0;position:relative; margin-top: 8px"><iframe src="https://player.vimeo.com/video/350564361?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+      </div>
+      <div class="gallery_column">
+        <div class="vid-wrapper"><div style="padding:100% 0 0 0;position:relative; margin-top: 8px"><iframe src="https://player.vimeo.com/video/350564289?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div></div>
+      </div>
+      <div class="gallery_column">
+        <div class="vid-wrapper"><div style="padding:100% 0 0 0;position:relative; margin-top: 8px"><iframe src="https://player.vimeo.com/video/350564273?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div></div>
       </div>
     </div>
+
+    <div class="row" style="margin-top: 8em;">
+      <h2>Master's Degree videos</h2>
+    </div>
+
+    <div class="gallery" id="exhibition">
+      <div class="gallery_column">
+        <div class="vid-wrapper"><div style="padding:100% 0 0 0;position:relative; margin-top: 8px"><iframe src="https://player.vimeo.com/video/350564155?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div></div>
+      </div>
+      <div class="gallery_column">
+        <div class="vid-wrapper"><div style="padding:100% 0 0 0;position:relative; margin-top: 8px"><iframe src="https://player.vimeo.com/video/350564331?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div></div>
+      </div>
+      <div class="gallery_column">
+        <div class="vid-wrapper"><div style="padding:100% 0 0 0;position:relative; margin-top: 8px"><iframe src="https://player.vimeo.com/video/350564312?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <a class="button" href="http://www.isiadesign.fi.it/offerta/iscrizioni2018-2019.html" target="_blank" style="display: block; margin: 8em auto; width: 50%">Visit landing page</a>
+    </div>
+
   </div>
+
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+<script>
+  $(document).ready(function(){
+    $(".vid-wrapper").fitVids();
+  });
+</script>
 </html>
