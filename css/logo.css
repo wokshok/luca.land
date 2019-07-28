@@ -1,0 +1,142 @@
+#logo {
+  font-size: 8px;
+  height: 3.3em;
+  width: 9em;
+  margin: 4em 0 12em;
+  display: block;
+}
+
+#L {
+	position: absolute;
+	width: 8em;
+	height: 3.3em;
+	border-bottom: .8em solid Black;
+	border-left: .8em solid Black;
+}
+
+#L:hover {
+  width: 100%;
+  transition-duration: 2s;
+}
+
+#U {
+	width: 3em;
+	height: 3em;
+	border-left: .8em solid Black;
+	border-bottom: .8em solid Black;
+	border-right: .8em solid Black;
+	border-bottom-right-radius: 1.5em;
+	border-bottom-left-radius: 1.5em;
+
+	-webkit-animation-name: girotondo; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 3.5s; /* Safari 4.0 - 8.0 */
+	transform: rotate(-15deg);
+	animation-name: girotondo;
+	animation-duration: 3.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+
+	position: absolute;
+	left: 0.3em;
+	top: 0; 
+	transform-origin: 50% 50% 0;
+	box-sizing: border-box;
+}
+
+#U:hover {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@keyframes girotondo {
+  20% {
+    top: 0;
+    left: 2em;
+  	transform: rotate(90deg);
+  	transform-origin: 50% 50% 0;
+  	
+  }
+  21% {
+  	top: 3em;
+  	left: 2em;
+  	transform-origin: 100% 0% 0;
+  	animation-timing-function: ease-in;
+  }
+  28% {
+  	top: 3em;
+  	left: 2em;
+  	transform-origin: 100% 0% 0;
+  	transform: rotate(125deg);
+  }
+  32% {
+  	top: 3em;
+  	transform-origin: 100% 0% 0;
+  	transform: rotate(135deg);
+  	left: 2em;
+  	animation-timing-function: ease-in;
+  }
+  40% {
+  	top: 3em;
+  	transform-origin: 100% 0% 0;
+  	transform: rotate(180deg);
+  	left: 2em;
+  }
+  41% {
+  	top: 3em;
+  	transform-origin: 0% 0% 0;
+  	left: 8em;
+  	animation-timing-function: ease-out;
+
+  }
+  52% {
+  	top: 3em;
+  	transform-origin: 0% 0% 0;
+  	left: 8em;
+  	transform: rotate(210deg);
+  	animation-timing-function: ease-in;
+  }
+  62% {
+  	top: 3em;
+  	transform-origin: 0% 0% 0;
+  	left: 8em;
+  	transform: rotate(212deg);
+    
+  }
+  69% {
+  	top: 3em;
+  	transform-origin: 0% 0% 0;
+  	left: 8em;
+  	transform: rotate(210deg);
+  	animation-timing-function: ease-in;
+  }
+  73% {
+  	top: 3em;
+  	transform-origin: 0% 0% 0;
+  	left: 8em;
+  	transform: rotate(180deg);
+  }
+  74% {
+  	top: 3em;
+  	transform-origin: 100% 0% 0;
+  	left: 2em;
+  	animation-timing-function: ease-in;
+  }
+  86% {
+  	top: 3em;
+  	transform-origin: 100% 0% 0;
+  	left: 2em;
+  	transform: rotate(90deg);
+  }
+  87% {
+  	left: 2em;
+  	transform-origin: 50% 50% 0;
+  	top: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+    #logo {
+      font-size: 8px;
+    }
+}

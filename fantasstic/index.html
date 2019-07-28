@@ -13,18 +13,20 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/logo.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -32,22 +34,52 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-      <a href="http://luca.land" style="display: inline-block;">
-        <div id="navbar">
-          <div id="L">
-            <div id="U"></div>
-          </div>
-        </div>
-      </a>
+    <a id="logo" href="http://luca.land">
+      <div id="L">
+        <div id="U"></div>
+      </div>
+    </a>
 
-    <div class="row">
-      <div class="column" style="margin-top: 25%">
-        <h5 style="text-align: center;">I'm working on this, I swear.</h5>
+    <div class="row" id="video">
+      <h2>Video "Fantasstic"</h2>
+      <div class="column" style="margin: 0;">
+        <div class="vid-wrapper">
+          <iframe src="https://www.youtube.com/embed/nu535oKBnyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="row" style="margin-top: 8em;">
+      <h2>Exhibition "Fashion is not a dress"</h2>
+    </div>
+
+    <div class="gallery" id="exhibition">
+      <div class="gallery_column">
+        <img class="f_img" src="1.jpg">
+        <img class="f_img" src="4.jpg">
+      </div>
+      <div class="gallery_column">
+        <img class="f_img" src="2.jpg">
+        <img class="f_img" src="6.jpg">
+      </div>
+      <div class="gallery_column">
+        <img class="f_img" src="3.jpg">
+        <img class="f_img" src="5.jpg">
+      </div>
+    </div>
+
+    <div class="row">
+      <a class="button" href="https://www.behance.net/gallery/60548165/Fantasstic-Florence-at-your-seat" target="_blank" style="display: block; margin: 8em auto; width: 50%">Check me on Behance</a>
+    </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
+<script src="../js/jquery.fitvids.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".vid-wrapper").fitVids();
+  });
+</script>
 </html>
