@@ -1,0 +1,573 @@
+@import "https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700";
+
+html {
+    font-size: 6px;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: rgb(0,55,123);
+}
+
+
+#container {
+    position: absolute;
+    width: 5.05rem;
+    height: 10rem;
+    margin: 5rem auto;
+    left: 0;
+    right: 0;
+    transition: all .7s;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#container.open {
+    width: 7.55rem;
+}
+
+
+.logo-sq {
+    position: absolute;
+    transition: all .7s;
+    transition-timing-function: ease-in-out;
+}
+
+#sq1 {
+    width: 5.05rem;
+    height: 5.05rem;
+    border-radius: .75rem;
+
+    top: .7rem;
+    left: 0;
+    background-color: rgba(109,207,246,.9);
+}
+
+#sq1.open {
+    width: 4.8rem;
+    height: 4.8rem;
+    top: .7rem;
+    left: 0;
+    background-color: rgba(109,207,246,.9);
+}
+
+#sq2 {
+    width: 4.8rem;
+    height: 4.8rem;
+    top: .7rem;
+    left: 0;
+    border-radius: .75rem;
+
+    transform: perspective(8rem) rotateY(00deg);
+    
+    border: .25rem solid White;
+    background-color: rgba(0,140,210,.7);
+    mix-blend-mode: multiply;
+}
+
+#sq2.open {
+    height: 5.4rem;
+    top: .15rem;
+    width: 4.9rem;
+    left: 1.6rem;
+    transform: perspective(8rem) rotateY(30deg);
+    border-radius: .75rem;
+}
+
+#sq3 {
+    width: 4.8rem;
+    height: 4.8rem;
+    top: .7rem;
+    left: 0;
+    border-radius: .75rem;  
+
+    transform: perspective(12rem) rotateY(0deg);
+    
+    border: .25rem solid White;
+    background-color: rgba(109,207,246,1);
+    mix-blend-mode: multiply;
+}
+
+#sq3.open {
+    width: 6.5rem;
+    height: 5.8rem;
+    left: 2.4rem;
+    top: 0;
+    transform: perspective(12rem) rotateY(54deg);
+}
+
+#sq4 {
+    position: absolute;
+    width: 5.05rem;
+    height: 5.05rem;
+    left: 0;
+    top: .7rem;
+    border-radius: .75rem;
+
+    background-color: rgba(3,78,162,1);
+    mix-blend-mode: normal;
+}
+
+#sq4.open {
+    width: 1.4rem;
+    left: 3.5rem;
+    height: 4.8rem;
+
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+#logo {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 0;
+    padding-top: 14rem;
+    width: 8rem;
+}
+
+p {
+    margin: 0 0 3rem;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all .3s;
+    transition-timing-function: ease-in-out;
+}
+
+a.next {
+    display: block;
+    width: 60%;
+    text-align: center;
+    margin: 10rem auto;
+    padding: 1rem;
+    border-radius: 4rem;
+    background-color: rgba(0,140,210,.9);
+    color: White;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: center;
+    padding-top: 15vh;
+}
+
+h5 {
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 2rem;
+    margin: 10rem 0 1rem;
+    text-align: center;
+}
+
+.big-card h6 {
+    margin: 20rem 0 1rem;
+}
+
+.quote {
+    width: 80%;
+    margin: 5rem auto;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    font-weight: 500;
+    background-color: #eff9fe;
+    padding: 4rem;
+    border-radius: 2rem;
+}
+
+.image-description {
+    width: 80%;
+    margin: 5rem auto;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    font-weight: 500;
+    background-color: #eff9fe;
+    padding: 4rem;
+    border-radius: 2rem;
+    position: relative;
+    top: -14rem;
+    margin-bottom: -14rem;
+}
+
+.numb-list {
+    width: 80%;
+    margin: 5rem 0;
+    padding-left: 9rem;
+    font-size: 5rem;
+    font-weight: 700;
+    counter-reset: my-awesome-counter;
+}
+
+.numb-list li {
+    margin: 10rem auto;
+    text-align: left;
+    background-color: #eff9fe;
+    padding: 4rem;
+    border-radius: 2rem;
+    counter-increment: my-awesome-counter;
+    list-style: none;
+}
+
+.numb-list li:before {
+    content: counter(my-awesome-counter);
+    padding: 2rem 3rem 2.5rem;
+    border-radius: 2rem;
+    background: rgba(0,140,210,.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    margin-left: -9.5rem;
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.numb-list h6 {
+    text-align: left;
+    margin: -1rem 2rem auto;
+}
+
+.numb-list p {
+    margin: 0 2rem 0;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+#content img {
+    width: 100%;
+    margin: 2rem 0 4rem;
+    border-radius: 2rem;
+}
+
+#sidebar {
+    background: rgba(239,249,254,.9);
+    color: #034ea2;
+    transition: all .7s;
+    animation-timing-function: ease-in-out;
+    padding: 0;
+    margin: 0 auto;
+    border-radius: 3rem;
+
+    position: fixed;
+    top: calc(100vh - 10rem);
+    left: 42.5vw;
+    right: 42.5vw;
+    
+    bottom: 4rem;
+    z-index: 999;
+    overflow: hidden;
+
+    max-width: 70rem;
+    padding: 1rem;
+}
+
+#sidebar.active {
+    border-radius: 2rem;
+    padding: 4rem 2rem 2rem;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    background: rgba(239,249,254,1);
+    overflow: scroll;
+}
+
+#menu > span {
+}
+
+#menu-close {
+    transition: all .5s;
+    position: absolute;
+    right: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1rem;
+    top: 12rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    mix-blend-mode: multiply;
+    background: #eff9fe;
+    color: White;
+}
+
+#menu-open {
+    opacity: 1;
+    transition: all .5s;
+}
+
+#menu-close.active {
+    top: 1rem;
+    background: rgba(0,140,210,.5);
+}
+
+#menu-open.active {
+}
+
+#content {
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+#text {
+    width: 80%;
+    max-width: 60rem;
+    margin: 0 auto 20rem;
+}
+
+#sidebar ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+#sidebar ul.components {
+    padding: .5rem 0;
+    margin-bottom: 3rem;
+    transition: all .5s;
+}
+
+#sidebar ul p {
+    padding: 0 1rem;
+    color: #034ea2;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#sidebar ul li a {
+    padding: 0rem 1rem;
+    display: block;
+    border-radius: 4rem;
+    margin: 0 auto;
+    width: 25rem;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+}
+
+#sidebar ul li a:hover {
+    background: #c7eafb;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem auto;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    background: #c7eafb;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}
+
+.box {
+    width: 100%;
+    background: #eff9fe;
+    border-radius: 1rem;
+    padding: 2rem; 
+}
+
+#menu {
+    padding: 3rem;
+    max-width: 15rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1000;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+
+.centered-list {
+    width: 80%;
+    margin: 10rem auto 0;
+    padding: 0;
+}
+
+.big-card {
+    padding: 5rem 5rem 3rem;
+    border-radius: 2rem;
+    background-color: rgba(239,249,254,1);
+    list-style-type: none;
+    margin: 20rem auto 0;
+}
+
+.palette {
+    width: 100%;
+    margin: 1rem 0 5rem;
+    text-align: center;
+}
+
+.color {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid White;
+    border-radius: 1rem;
+    height: 10rem;
+}
+
+.c1 {width: 6%}
+.c2 {width: 12%}
+.c3 {width: 18%}
+.c4 {width: 34%}
+
+#transp > .circle-1 {
+    width:  15rem;
+    height: 15rem;
+    border-radius: 15rem;
+    background: rgba(0,140,210,.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    display: block;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    animation-name: left;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+#transp > .circle-2 {
+    width:  15rem;
+    height: 15rem;
+    border-radius: 15rem;
+    background: rgba(0,140,210,.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    display: block;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    animation-name: right;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes left {
+    25% {
+        left: -10rem;
+    }
+    75% {
+        left: 10rem;
+    }
+}
+
+@keyframes right {
+    25% {
+        right: -10rem;
+    }
+    75% {
+        right: 10rem;
+    }
+}
+
+#friendliness > .circle-1 {
+    width:  15rem;
+    height: 15rem;
+    border-radius: 15rem;
+    background: rgba(0,140,210,.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    display: block;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#friendliness > .circle-2 {
+    width:  5rem;
+    height: 5rem;
+    border-radius: 15rem;
+    background: rgba(0,140,210,.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    display: block;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 5rem;
+
+    animation-name: breath;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes breath {
+    50% {
+        width: 15rem;
+        height: 15rem;
+        animation-timing-function: ease-in-out;
+        margin-top: 0;
+    }
+}
+
+#innovation > .circle-1 {
+    width:  15rem;
+    height: 15rem;
+    border-radius: 15rem;
+    background: rgba(0,140,210,.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    display: block;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#innovation > .circle-2 {
+    width:  5rem;
+    height: 5rem;
+    border-radius: 15rem;
+    background: rgba(0,140,210,.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    display: block;
+
+    transform: rotate(0deg);
+    transform-origin: 2.5rem 7.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    animation-name: buffer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes buffer {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    html {
+        font-size: 9px;
+    }
+}

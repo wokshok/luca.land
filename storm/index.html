@@ -1,53 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Luca Landi</title>
-  <meta name="description" content="">
-  <meta name="author" content="Luca Landi">
+    <title>Visual library | STORM</title>
+    <link rel="shortcut icon" type="image/png" href="icon.png"/>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/skeleton.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/logo.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-      <a id="logo" href="http://luca.land">
-        <div id="L">
-          <div id="U"></div>
-        </div>
-    </a>
-
-    <div class="row">
-      <div class="column" style="margin-top: 25%">
-        <h5 style="text-align: center;">I'm working on this, I swear.</h5>
-      </div>
+<div id="container" class="">
+        <div class="logo-sq" id="sq1"></div>
+        <div class="logo-sq" id="sq2"></div>
+        <div class="logo-sq" id="sq3"></div>
+        <div class="logo-sq" id="sq4"></div>
     </div>
-  </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <img id="logo" src="logo.png">
+
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light d-md-none">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-align-left"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="text">
+        	<h1>This is STORM's <b>visual library</b></h1>
+            <h5 style="text-align: center; font-weight: 500; margin: -1rem 0 0; font-size: 2.5rem; text-transform: none;">(where the brand rests at night)</h6>
+                <a class="next" href="brand/index.html"><b>Start</b> ></a>
+
+        </div>
+
+
+    </div>
+
+<div id="menu">
+    <span id="menu-open"></span>
+    <span id="menu-close">X</span>
+</div>
+
+    <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+    <script type="text/javascript">
+		$(document).ready(function () {
+
+		    $('#menu').on('click', function () {
+		        $('#sidebar, #menu-close, #menu-open, .components').toggleClass('active');
+		    });
+
+            setTimeout (function(){
+                $('#container').addClass('open');
+                $('#sq1').addClass('open');
+                $('#sq2').addClass('open');
+                $('#sq3').addClass('open');
+                $('#sq4').addClass('open');
+            }, 500);
+
+            $('#container').hover(
+                function(){ $('#sq1, #sq2, #sq3, #sq4, #container').removeClass('open') },
+                function(){ $('#sq1, #sq2, #sq3, #sq4, #container').addClass('open') }
+            )
+
+        });
+
+    </script>
+
 </body>
+
 </html>

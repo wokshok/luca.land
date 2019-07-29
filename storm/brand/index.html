@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Our brand | STORM</title>
+    <link rel="shortcut icon" type="image/png" href="../icon.png"/>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+
+    <a href="../index.html">
+        <div id="container" class="">
+            <div class="logo-sq" id="sq1"></div>
+            <div class="logo-sq" id="sq2"></div>
+            <div class="logo-sq" id="sq3"></div>
+            <div class="logo-sq" id="sq4"></div>
+        </div>
+
+        <img id="logo" src="../logo.png">
+    </a>
+
+    <!-- Page Content -->
+    <div id="content">
+
+        <div id="text">
+        	<h1></h1>
+                <p>STORM is a <b>yacht finishing company founded in 2002</b>. It works hand in hand with yachting world leaders in new build construction, in both Italy and Germany. Over recent years STORM has grown refit volume and succesfully completed projects up to 100m in Europe and Asia.</p>
+
+                <h1 id="story">The brand story</h1>
+                    <img src="story.png">
+                    <p>Back in the days yacht finishing was hard-yet-fun work. There were more margins for everyone in the industry, and then beers and parties. But especially lighthearted time to enjoy some surfing, when work was over. Nowadays, instead, even the richest shipowners want more for less. All trying to take the fun out of work.</p>
+                    <p>Nonetheless, in the last 15 years STORM has managed to grow from a small company to an international-level one. Thanks to a continuous effort towards harder challenges, today STORM is not the silent boy in the class anymore. Today STORM works on 20.000 square meters at once.</p>
+                    <p> But this doesn’t mean there are no more challenges - improving never goes out of fashion. Ever better training and knowhow is necessary for production and quality inspection. Management needs the most up-to-date tools and software, to foresee the unforeseeable. Effort in communication and collaboration are more important than ever before.</p>
+
+                <h6>The vision</h6>
+                    <img src="vision.png">
+                    <p class="image-description">STORM envisions a world where <b>continuous improvement makes everything work flawlessly.</b><br><br>So that everyone can go back to surfing.</p>
+
+                <h6>The payoff</h6>
+                    <p>Everyone in STORM is different, but something everyone must share to work in the company is <b>courage</b> - to embrace problems; <b>passion</b> - to feel fulfilled when the best boat possible is finished; <b>enterprenaurship</b> - to find new solutions to new problems. That's why we say that...</p>
+                    <p class="quote">Our best <b>is next.</b></p>
+
+                <h1 id="values">The brand values</h1>
+                    <p>Our vision makes STORM a forward-looking company, though innovation is not the end goal: human contact always comes first. <b>Innovation's only purpose is to help people</b>, whether clients or employees, live better. And better for STORM means more time for the self, more fun and the certainty that every problem can be solved.</p>
+                    <p>Throughout our story these are the values that always characterized STORM and that define our day to day work:</p>
+                    <ol class="numb-list">
+                        <li>
+                            <h6>Continuous innovation</h6>
+                            <p>Innovation means new and more efficient processes that guarantee high-quality, on budget and on time.</p>
+                        </li>
+                        <li>
+                            <h6>Total transparency</h6>
+                            <p>Thanks to our quality reporting and progress status detail our clients are always up to date and informed about the project.</p>
+                        </li>
+                        <li>
+                            <h6>Peace of mind</h6>
+                            <p>Quality comes from passion and, since we are passionate about our work, we strive to create a serene and tranquil workspace for everyone involved.</p>
+                        </li>
+                    </ol>
+
+                <h1 id="principles">The design principles</h1>
+                <p>Values become principles when are throughly practised. In our visual library three are the main principles ispired by STORM's values that characterize every aspect of the brand:</p>
+                    <ul class="centered-list">
+                        <li class="big-card" id="transp">
+                            <span class="circle-1"></span>
+                            <span class="circle-2"></span>
+                            <h6>Transparency by addition</h6>
+                            <p>Transparency doesn’t only come in words. STORM’s brand makes of transparency a consistent theme.</p>
+                        </li>
+                        <li class="big-card" id="friendliness">
+                            <span class="circle-1"></span>
+                            <span class="circle-2"></span>
+                            <h6>Welcoming animations</h6>
+                            <p>Being friendly, making space, with calm and ease. Espeacially ease-in-out animations.</p>
+                        </li>
+                        <li class="big-card" id="innovation">
+                            <span class="circle-1"></span>
+                            <span class="circle-2"></span>
+                            <h6>Digitally first</h6>
+                            <p>Innovation means services and service means digital communication. We are ready.</p>
+                        </li>
+                    </ul>
+
+            <a class="next" href="../style/index.html">Up next <b>style</b> ></a>
+        </div>
+
+
+
+    </div>
+
+<div id="menu">
+    <span id="menu-open"></span>
+    <span id="menu-close">X</span>
+</div>
+
+    <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#menu, .menu-link').on('click', function () {
+                $('#sidebar, #menu-close, #menu-open, .components, .menu-link').toggleClass('active');
+            });
+
+            setTimeout (function(){
+                $('#container').addClass('open');
+                $('#sq1').addClass('open');
+                $('#sq2').addClass('open');
+                $('#sq3').addClass('open');
+                $('#sq4').addClass('open');
+            }, 500);
+
+            $('#container').hover(
+                function(){ $('#sq1, #sq2, #sq3, #sq4, #container').removeClass('open') },
+                function(){ $('#sq1, #sq2, #sq3, #sq4, #container').addClass('open') }
+            )
+
+        });
+
+    </script>
+
+</body>
+
+</html>
