@@ -99,7 +99,7 @@
 	<div class="navbar-container">
 		<nav class="navbar navbar-expand-lg fixed-top">
 			<div class="container">
-				<a class="navbar-brand" href="">
+				<a class="navbar-brand" href="#hero">
 					<div id="container" class="d-none">
 						<div class="logo-sq" id="sq1"></div>
 						<div class="logo-sq" id="sq2"></div>
@@ -133,7 +133,7 @@
 	
 	<img id="logo-img" src="logo-white.png">
 
-	<section class="bg-primary text-light min-vh-100 o-hidden d-flex flex-column justify-content-center" data-overlay="">
+	<section id="hero" class="bg-primary text-light min-vh-100 o-hidden d-flex flex-column justify-content-center" data-overlay="">
       <div class="container">
         <div class="row justify-content-center text-center align-items-center">
           <div class="col-xl-10 col-md-10 layer-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
@@ -804,6 +804,12 @@
 			$(".cta").click(function() {
 			    $('html, body').animate({
 			        scrollTop: $("#services").offset().top
+			    }, 1000);
+			});
+
+			$(".navbar-brand").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $("#hero").offset().top
 			    }, 1000);
 			});
 
