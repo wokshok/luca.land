@@ -243,7 +243,50 @@ h1 {
 #services {
 	max-width: 1200px;
 	margin: 0 auto;
+}
+
+section {
 	padding: 8rem 0;
+}
+
+#hero {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+#hero video {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#hero .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #007bff;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#cover {
+	z-index: 100;
+	position: relative;
 }
 
 #newbuild {}

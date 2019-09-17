@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STORM</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1" name="viewport"/>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132199871-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132199871-2');
+	</script>
+
+</head>
+<body>
+	<a href="../index.html">
+	<div id="container" class="">
+		<div class="logo-sq" id="sq1"></div>
+		<div class="logo-sq" id="sq2"></div>
+		<div class="logo-sq" id="sq3"></div>
+		<div class="logo-sq" id="sq4"></div>
+	</div>
+
+	<img src="logo.png">
+	</a>
+
+	<div id="intro">
+		<p>Your request was <b>successful</b>. You will receive our company profile in your inbox shortly.<br><br>If are using Gmail, you may need to check out the "Promotions" section.</p>
+	</div>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+
+			setTimeout (function(){
+				$('#container').addClass('open');
+				$('#sq1').addClass('open');
+				$('#sq2').addClass('open');
+				$('#sq3').addClass('open');
+				$('#sq4').addClass('open');
+			}, 500);
+
+			/* var sq1 = document.querySelector("#sq1");
+			var sq2 = document.querySelector("#sq2");
+			var sq3 = document.querySelector("#sq3");
+			var sq4 = document.querySelector("#sq4");
+			var container = document.querySelector("#container");
+			var closeButton = document.querySelector("#container");
+			var openButton = document.querySelector("#container");
+
+			closeButton.addEventListener("mouseover", function() {
+			  sq1.classList.removeClass("open");
+			  sq2.classList.removeClass("open");
+			  sq3.classList.removeClass("open");
+			  sq4.classList.removeClass("open");
+			  container.classList.removeClass("open");
+			});
+
+			openButton.addEventListener("mouseout", function() {
+			  sq1.classList.addClass("open");
+			  sq2.classList.addClass("open");
+			  sq3.classList.addClass("open");
+			  sq4.classList.addClass("open");
+			  container.classList.addClass("open");
+			}); */
+
+			$('#container').hover(
+			    function(){ $('#sq1, #sq2, #sq3, #sq4, #container').removeClass('open') },
+			    function(){ $('#sq1, #sq2, #sq3, #sq4, #container').addClass('open') }
+			)
+		});
+
+	</script>
+</body>
+</html>
