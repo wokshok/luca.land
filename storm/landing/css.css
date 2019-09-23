@@ -8,6 +8,7 @@ body {
 	font-family: 'Raleway', sans-serif!important;
 	margin: 0;
 	font-size: 15px;
+	overflow-x: hidden;
 }
 
 input {
@@ -190,7 +191,7 @@ input {
 	padding: 0;
 	background-size: cover;
 	background-position: top;
-	height: 95vh;
+	height: 100vh;
 }
 
 h1 {
@@ -228,6 +229,7 @@ h1 {
 .nav-link {
 	width: 150px!important;
 	text-align: center!important;
+	color: #555555;
 }
 
 .navbar-toggler {
@@ -240,11 +242,6 @@ h1 {
 	opacity: .8;
 }
 
-#services {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
 section {
 	padding: 8rem 0;
 }
@@ -252,7 +249,6 @@ section {
 #hero {
   position: relative;
   background-color: black;
-  height: 100vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -294,6 +290,12 @@ section {
 #refit {}
 
 #more {}
+
+#company {
+	background-image: url('company.jpg');
+	background-size: cover;
+}
+
 *,
 *::before,
 *::after {
@@ -397,12 +399,20 @@ p {
 }
 
 .app {
-	background-image: url('app-close.png');
-	background-position: center;
+	background-image: url('app 2.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 80vh;
+	min-height: 70vh;
 	width: 100%;
+	 background-position:left;
+    -webkit-transition:background-position 4s ease-in-out;  
+    -moz-transition:background-position 4s ease-in-out;  
+    -o-transition:background-position 4s ease-in-out;  
+    transition:background-position 4s ease-in-out; 
+}
+
+.app:hover {
+	 background-position:right;
 }
 
 .end {
