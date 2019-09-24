@@ -112,17 +112,17 @@
 					<div class="py-2 py-lg-0">
 						<ul class="navbar-nav align-items-center">
 							<li class="nav-item">
-								<a href="#newbuild" class="nav-link light">Our services</a>
+								<a href="#services" class="nav-link light link-services">Our services</a>
 							</li>
 							<li class="nav-item">
-								<a href="" class="nav-link light">Our points</a>
+								<a href="#map" class="nav-link light link-map">Our points</a>
 							</li>
 							<li style="width: 7rem;"></li>
 							<li class="nav-item">
-								<a href="" class="nav-link light">Company</a>
+								<a href="#company" class="nav-link light link-company">Company</a>
 							</li>
 							<li class="nav-item">
-								<a href="" class="nav-link light">Contacts</a>
+								<a href="#contacts" class="nav-link light link-contacts">Contacts</a>
 							</li>
 						</ul>
 					</div>
@@ -237,7 +237,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(243,253,255,1) 
 	</section>
 
 
-	<section data-overlay="" style="padding: 2rem; margin-bottom: -2rem">
+	<section id="map" data-overlay="" style="margin-bottom: -2rem">
 	<div class="map"></div>
       <div class="container" style="margin: -4em auto 8em">
         <div class="row justify-content-center text-center align-items-end">
@@ -296,13 +296,13 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(243,253,255,1) 
                 Our company is more than what you think.
               </p>
             </div>
-            <a href="" class="btn btn-lg btn-light cta" data-smooth-scroll="" style="max-width: 20rem; font-weight: 700; border: none;">Learn more</a>
+            <a href="company.html" class="btn btn-lg btn-light cta" data-smooth-scroll="" style="max-width: 20rem; font-weight: 700; border: none;">Learn more</a>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="bg-light" style="padding-top: 5rem">
+    <footer id="contacts" class="bg-light" style="padding-top: 5rem">
       <div class="container">
 
         <div class="row mb-5">
@@ -830,6 +830,30 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(243,253,255,1) 
 			$(".navbar-brand").click(function() {
 			    $('html, body').animate({
 			        scrollTop: $("#hero").offset().top
+			    }, 1000);
+			});
+
+			$(".link-services").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $("#services").offset().top
+			    }, 1000);
+			});
+
+			$(".link-map").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $("#map").offset().top
+			    }, 1000);
+			});
+
+			$(".link-company").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $("#company").offset().top
+			    }, 1000);
+			});
+
+			$(".link-contacts").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $("#contacts").offset().top
 			    }, 1000);
 			});
 
