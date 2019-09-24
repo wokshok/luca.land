@@ -276,7 +276,7 @@ section {
 	height: 100%;
 	width: 100%;
 	background-color: #007bff;
-	opacity: 0.5;
+	opacity: 0.7;
 	z-index: 1;
 }
 
@@ -292,8 +292,6 @@ section {
 #more {}
 
 #company {
-	background-image: url('company.jpg');
-	background-size: cover;
 }
 
 *,
@@ -399,20 +397,13 @@ p {
 }
 
 .app {
-	background-image: url('app 2.png');
+	background-color: #e7ebed;
+	background: url(app3.png);
 	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 70vh;
+	background-size: contain;
+	background-position: 45% 0%;
+	min-height: 80vh;
 	width: 100%;
-	 background-position:left;
-    -webkit-transition:background-position 4s ease-in-out;  
-    -moz-transition:background-position 4s ease-in-out;  
-    -o-transition:background-position 4s ease-in-out;  
-    transition:background-position 4s ease-in-out; 
-}
-
-.app:hover {
-	 background-position:right;
 }
 
 .end {
