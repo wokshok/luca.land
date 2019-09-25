@@ -8,7 +8,6 @@ body {
 	font-family: 'Raleway', sans-serif!important;
 	margin: 0;
 	font-size: 15px;
-	overflow-x: hidden;
 }
 
 input {
@@ -293,6 +292,8 @@ h1 {
 	bottom: 4rem;
 	right: 0;
 	left: 0;
+	width: 80%;
+	margin: 0 auto;
 }
 
 #cover h1 {
