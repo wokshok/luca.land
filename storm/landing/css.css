@@ -185,15 +185,6 @@ input {
 	width: 4.5em;
 }
 
-#hero {
-	background-color: #e8f4f8;
-	margin: 0;
-	padding: 0;
-	background-size: cover;
-	background-position: top;
-	height: 100vh;
-}
-
 h1 {
 	text-align: center;
 	font-weight: 700;
@@ -242,16 +233,14 @@ h1 {
 	opacity: .8;
 }
 
-section {
-	padding: 8rem 0;
-}
-
 #hero {
-  position: relative;
-  background-color: black;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+	background-color: #e8f4f8;
+	background-image: url('company2.jpg');
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: bottom;
+	height: 100vh;
 }
 
 #hero video {
@@ -271,27 +260,85 @@ section {
 
 #hero .overlay {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
-	height: 100%;
+	height: 80%;
 	width: 100%;
-	background-color: #007bff;
-	opacity: 0.7;
+	opacity: .5;
+	/** background: rgb(255,255,255);
+	background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#007bff",GradientType=1);	opacity: 0.6;
+	**/
+
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+
 	z-index: 1;
 }
 
 #cover {
 	z-index: 100;
-	position: relative;
+	position: absolute;
+	bottom: 6rem;
+	right: 0;
+	left: 0;
 }
 
-#newbuild {}
+#cover h1 {
+	font-weight: 500;
+	font-size: 1.5rem;
+}
 
-#refit {}
+#cover a {
+	max-width: 10rem;
+	color: white;
+	font-weight: 700;
+	background: #FF4500;
+	border: none;
+	font-size: .75rem;
+}
 
-#more {}
+.didascalia {
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+	background: white;
+	z-index: 100;
+	opacity: .6;
+}
+
+.didascalia p {
+	font-size: .75rem;
+	color: #666666;
+	padding: .25rem;
+	margin: 0;
+	font-weight: 400;
+}
+
+#services {
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(243,253,255,1) 100%);
+	padding-bottom: 10rem;
+}
+
+#nb-image {
+	position: relative; top: 4rem; height: auto; display: block; margin: 0 auto; padding: 0;
+}
 
 #company {
+	background: url('company2.jpg');
+	min-height: 100vh;
+	background-size: cover;
+	background-position: 50% 100%;
+}
+
+#company-container {
+	margin-top: -10rem;
 }
 
 *,
@@ -479,15 +526,35 @@ p {
 #m27 {width: 12%}
 
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 768px) {
+	#nb-image {
+		position: absolute; left: -10rem; top: 4rem; height: auto; display: block; margin: 0 auto; padding: 0rem
+	}
 
 }
 
-@media (max-width: 768px) {
-  .cards_item {
-    width: 48%;
-  }
+@media (min-width: 576px) {
+	#cover h1 {
+		font-size: 2.5em;
+	}
 
+	#cover a {
+		max-width: 20rem;
+		font-size: 1.25rem;
+	}
+
+	.didascalia {
+		right: 2rem;
+		bottom: 2rem;
+	}
+
+	.didascalia p {
+		font-size: 1rem;
+		padding: .5rem;
+	}
+}
+
+@media (max-width: 768px) {
   .map {
   	background-size: contain;
   }
