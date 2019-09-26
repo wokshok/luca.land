@@ -299,6 +299,7 @@ h1 {
 .title {
 	font-weight: 500;
 	font-size: 1.5rem;
+	text-align: left;
 }
 
 .text {
@@ -583,6 +584,7 @@ p {
 @media (min-width: 576px) {
 	.title {
 		font-size: 2.5em;
+		text-align: center;
 	}
 
 	#cover a {
