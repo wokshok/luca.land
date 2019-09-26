@@ -296,16 +296,19 @@ h1 {
 	margin: 0 auto;
 }
 
-#cover h1 {
+.title {
 	font-weight: 500;
 	font-size: 1.5rem;
+}
+
+.text {
+	font-size: 1rem;
 }
 
 #cover a {
 	max-width: 10rem;
 	color: white;
 	font-weight: 700;
-	background: #FF4500;
 	border: none;
 	font-size: .75rem;
 }
@@ -314,25 +317,25 @@ h1 {
 	position: absolute;
 	right: 1rem;
 	bottom: 1rem;
-	background: white;
 	z-index: 100;
 	opacity: .6;
+	background: white;
 }
 
 .didascalia p {
 	font-size: .75rem;
-	color: #666666;
+	color: #000000;
 	padding: .25rem;
 	margin: 0;
 	font-weight: 400;
 }
 
 #services {
-	padding-bottom: 5rem;
+	padding-bottom: 6rem;
 }
 
 .services {
-	margin-top: 4rem;
+	margin-top: 6rem;
 }
 
 .services h2 {
@@ -341,6 +344,10 @@ h1 {
 
 .services p {
 	font-size: 1.25rem;
+}
+
+.services a {
+	color: white; font-weight: 700; background: #FF4500; border: none;
 }
 
 #nb-image {
@@ -443,14 +450,14 @@ img {
 .map {
 	background: url(map.png);
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 45% 50%;
-	min-height: 80vh;
+	background-size: contain;
+	background-position: 45% 0%;
+	min-height: 45vh;
 	width: 100%;
 }
 
 .mb-4 > p {
-	max-width: 20rem;
+	max-width: 25rem;
 }
 
 p {
@@ -460,11 +467,11 @@ p {
 
 .app {
 	background-color: #e7ebed;
-	background: url(app3.png);
+	background: url(app3.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: 45% 0%;
-	min-height: 80vh;
+	background-position: 45% 100%;
+	min-height: 40vh;
 	width: 100%;
 }
 
@@ -478,11 +485,14 @@ p {
 }
 
 #portfolio {
-	padding: 0 4rem 0;
+	padding: 8rem 0;
+}
+
+#portfolio-list {
+	padding: 0;
 	margin: 0 auto;
 	max-width: 60rem;
-	font-size: 2.5rem;
-	display: none;
+	font-size: 1rem;
 }
 
 .boat {
@@ -501,7 +511,6 @@ p {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	font-weight: 700;
-	font-size: 2rem;
 }
 
 .lenght {
@@ -520,14 +529,18 @@ p {
 #m99 {width: 46%}
 #m97 {width: 45%}
 #m90 {width: 42%}
+#m78 {width: 35.5%}
+#m75 {width: 35%}
 #m72 {width: 33.6%}
 #m70 {width: 32%}
 #m69 {width: 31.5%}
+#m66 {width: 30.5%}
 #m65 {width: 30%}
 #m64 {width: 29.9%}
 #m62 {width: 28.9%}
 #m60 {width: 28%}
 #m59 {width: 27.5%}
+#m58 {width: 27%}
 #m57 {width: 26.5%}
 #m56 {width: 26%}
 #m55 {width: 25.5%}
@@ -538,7 +551,9 @@ p {
 #m46 {width: 22%}
 #m45 {width: 21.5%}
 #m44 {width: 20.5%}
+#m41 {width: 19%}
 #m38 {width: 17.7%}
+#m33 {width: 15.4%}
 #m29 {width: 13.5%}
 #m27 {width: 12%}
 
@@ -548,10 +563,25 @@ p {
 		max-width: 80%; top: 4rem; height: auto; display: block; margin: 0 auto; padding: 0rem
 	}
 
+	.services a {
+		max-width: 20rem;
+	}
+
+	.map {
+	  	background-size: cover;
+	  	background-position: 45% 50%;
+		min-height: 80vh;
+	}
+
+	.app {
+		min-height: 80vh;
+	}
+
+
 }
 
 @media (min-width: 576px) {
-	#cover h1 {
+	.title {
 		font-size: 2.5em;
 	}
 
@@ -567,7 +597,7 @@ p {
 
 	.didascalia p {
 		font-size: 1rem;
-		padding: .5rem;
+		padding: .25rem .5rem;
 	}
 
 	.services {
@@ -581,12 +611,34 @@ p {
 	.services p {
 		font-size: 1.75rem;
 	}
+
+	.text {
+		font-size: 1.5rem;
+	}
+
+	#portfolio-list {
+		padding: 0 4rem 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.collapse.dont-collapse-sm {
+	    display: flex!important;
+	    height: auto!important;
+	    visibility: visible;
+	 }
+
+	 #previous-link {
+	 	color: black;
+	 }
+
+	 #previous-link:hover {
+	 	text-decoration: none;
+	 	cursor: default;
+	 }
 }
 
 @media (max-width: 768px) {
-  .map {
-  	background-size: contain;
-  }
 
   .rellax {
   	position: relative!important;
