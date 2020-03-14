@@ -96,6 +96,10 @@ body {
 		position: sticky;
 		top: 0;
 	}
+
+	#filters::-webkit-scrollbar {
+	  display: none;
+	}
 }
 
 @media (orientation: landscape) {
