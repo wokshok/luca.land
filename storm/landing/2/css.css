@@ -657,3 +657,18 @@ p {
  }
 
 }
+
+@media screen and (orientation:landscape) and (max-device-width: 700px) {
+   .title {
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	.cover-body {
+		font-size: 1rem;
+	}
+
+	.overlay {
+		height: 100%!important;
+	}
+}

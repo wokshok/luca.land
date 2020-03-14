@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Luca Landi</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/system-font.css">
+  <link rel="stylesheet" href="css/logo.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo-container">
+      <a id="logo" href="https://luca.land">
+          <div id="L">
+            <div id="U"></div>
+          </div>
+      </a>
+    </div>
+    <div class="profileimg-container">
+      <img src="images/luca.jpg">
+    </div>
+
+    <p class="titoletto">Filter by topic</p>
+    <div id="filters">
+        <div class="filter red">
+          <input type="checkbox" id="red" value=".red"/>
+          <label for="red">Red</label> 
+        </div>
+
+        <div class="filter green">
+          <input type="checkbox" id="green" value=".green"/>
+          <label for="green">Green</label> 
+        </div>
+
+        <div class="filter blue">
+          <input type="checkbox" id="blue" value=".blue"/>
+          <label for="blue">Blue</label> 
+        </div>
+
+        <div class="filter orange">
+          <input type="checkbox" id="orange" value=".orange"/>
+          <label for="orange">Orange</label> 
+        </div>
+
+        <div class="filter pink">
+          <input type="checkbox" id="pink" value=".pink"/>
+          <label for="pink">Pink</label> 
+        </div>
+
+        <div class="filter brown">
+          <input type="checkbox" id="brown" value=".brown"/>
+          <label for="brown">Brown</label> 
+        </div>
+
+        <div class="filter orange">
+          <input type="checkbox" id="orange" value=".orange"/>
+          <label for="orange">Purple</label> 
+        </div>
+    </div>
+  </div>
+
+  <div id="container" class="grid">
+    <div class="grid-sizer"></div>
+    <div class="gutter-sizer"></div>
+    <div class="grid-item red" style="height: 420px"></div>
+    <div class="grid-item green" style="height: 730px"></div>
+    <div class="grid-item blue" style="height: 380px"></div>
+    <div class="grid-item orange" style="height: 612px"></div>
+    <div class="grid-item pink"></div>
+    <div class="grid-item brown"></div>
+    <div class="grid-item blue"></div>
+    <div class="grid-item purple"></div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script type="text/javascript">
+    var $container =
+    $('#container').isotope({
+      itemSelector: '.grid-item',
+      masonry: {
+        columnWidth: '.grid-sizer',
+        gutter: '.gutter-sizer'
+      },
+      hiddenStyle: {
+        opacity: 0
+      },
+      visibleStyle: {
+        opacity: 1
+      },
+      transitionDuration: 0,
+    });
+
+    // filter with selects and checkboxes
+    var $checkboxes = $('#filters input');
+
+    $checkboxes.change( function() {
+      // map input values to an array
+      var inclusives = [];
+      // inclusive filters from checkboxes
+      $checkboxes.each( function( i, elem ) {
+        // if checkbox, use value if checked
+        if ( elem.checked ) {
+          inclusives.push( elem.value );
+        }
+      });
+
+      // combine inclusive filters
+      var filterValue = inclusives.length ? inclusives.join(', ') : '*';
+
+      $container.isotope({ filter: filterValue })
+    });
+  </script>
+
+</body>
+</html>
