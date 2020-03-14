@@ -16,7 +16,7 @@ body {
 }
 
 .logo-container {
-	padding: 32px;
+	padding: 32px 32px 0;
 	display: inline-block;
 }
 
@@ -37,6 +37,12 @@ body {
 .titoletto {
 	font-weight: 700;
 	margin: 32px 32px 8px;
+}
+
+.body {
+	margin: 32px 32px 8px;
+	line-height: 22px;
+	opacity: .8;
 }
 
 #filters {
@@ -64,6 +70,7 @@ body {
 	content: '\2715';
 	margin-left: 12px;
 	display: none;
+	line-height: 32px;
 }
 
 .filter label:hover {
