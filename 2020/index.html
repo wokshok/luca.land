@@ -28,6 +28,24 @@
 </head>
 <body>
   <div id="cover"></div>
+  <div class="tabbar" id="tabbar">
+    <ul>
+      <li><a href="" class="active">
+        <img src="https://image.flaticon.com/icons/svg/711/711129.svg">
+        <label>Work</label>
+      </a></li><li>
+
+      <a href="">
+        <img src="https://image.flaticon.com/icons/svg/1738/1738760.svg">
+        <label>About</label>
+      </a></li><li>
+
+      <a href="">
+        <img src="https://image.flaticon.com/icons/svg/2099/2099058.svg">
+        <label>Settings</label>
+      </a></li>
+    </ul>
+  </div>
 
   <div class="sidebar">
     <div class="logo-container">
@@ -40,7 +58,7 @@
     <div class="profileimg-container">
       <img src="images/luca.jpg">
     </div>
-    <p class="body">These are some of the companies I've worked with.<b> You can find projects about:</b></p>
+    <p class="text-body">These are some of the companies I've worked with.<b> You can find projects about:</b></p>
     <div id="filters">
         <div class="filter red">
           <input type="checkbox" id="red" value=".red"/>
@@ -65,16 +83,6 @@
         <div class="filter pink">
           <input type="checkbox" id="pink" value=".pink"/>
           <label for="pink">Print</label> 
-        </div>
-
-        <div class="filter brown">
-          <input type="checkbox" id="brown" value=".brown"/>
-          <label for="brown">Social</label> 
-        </div>
-
-        <div class="filter orange">
-          <input type="checkbox" id="purple" value=".purple"/>
-          <label for="purple">Workshops</label> 
         </div>
     </div>
   </div>
@@ -125,6 +133,17 @@
       $(window).on('load', function() {
         $("#cover").fadeOut(300);
       });
+
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("tabbar").style.bottom = "0";
+        } else {
+          document.getElementById("tabbar").style.bottom = "-62px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
 
       var $container =
       $('#container').isotope({
