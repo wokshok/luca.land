@@ -75,7 +75,7 @@ body {
 	line-height: 32px;
 }
 
-.filter label:hover {
+body.hasHover .filter label:hover {
 	cursor: pointer;
 	background-color: #f1f2f3;
 }
@@ -173,7 +173,7 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#777777",GradientType=1);
 }
 */
-.grid-item:hover {
+body.hasHover .grid-item:hover {
 /*	box-shadow: #999 0 4px 16px -4px;
 */	transition: all 300ms;
 	cursor: pointer;
@@ -181,7 +181,7 @@ body {
 	border-radius: 8px;
 }
 
-.grid-item:hover .collection {
+body.hasHover .grid-item:hover .collection {
 	transform: translate(-50%, -50%) scale(1.2);
 	transition-duration: 300ms;
 }
