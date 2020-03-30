@@ -16,6 +16,16 @@ body {font-family: 'system-ui';}
 	opacity: .8;
 	font-size: 18px;
 }
+/* ------------ Top bar ------------ */
+.topbar {
+	height: 56px;
+	background-color: white;
+	box-shadow: 0 8px 32px -16px;
+}
+
+.topbar > .logo-container > #logo {
+	font-size: 4px!important;
+}
 
 /* ------------ Tab bar ------------ */
 
@@ -31,6 +41,10 @@ body {font-family: 'system-ui';}
 	position: fixed;
 	bottom: 0;
 	z-index: 9999;
+}
+
+.tabbar::selection {
+	color: transparent;
 }
 
 .tabbar ul {
