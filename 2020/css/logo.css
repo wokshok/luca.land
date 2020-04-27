@@ -5,6 +5,10 @@
   display: inline-block;
 }
 
+#logo.small {
+  font-size: 4px;
+}
+
 #L {
 	position: absolute;
 	width: 8em;
@@ -14,10 +18,10 @@
   box-sizing: content-box!important;
 }
 
-#L:hover {
+/* #L:hover {
   width: 100%;
   transition-duration: 2s;
-}
+} */
 
 #U {
 	width: 3em;
