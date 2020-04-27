@@ -257,10 +257,19 @@ a.back:hover ~ .for-whom {
 		white-space: nowrap;
 		position: sticky;
 		top: 0;
+		padding: 0 16px;
 	}
 
 	#filters::-webkit-scrollbar {
 	  display: none;
+	}
+
+	.menu {
+		padding: 24px 8px 16px;
+	}
+
+	.text-body {
+		margin: 32px 16px 16px;
 	}
 }
 
