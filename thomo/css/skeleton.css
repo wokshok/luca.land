@@ -42,7 +42,7 @@
 @keyframes clip-path-animation {
   to {
     clip-path: circle(10%);
-    background-position: 50% 45%;
+    background-position: 50% 40%;
   }
 }
 
@@ -56,7 +56,8 @@
   }
   100% {
     width: 80%;
-    height: 80%;
+    height: 0;
+    padding-top: 25%;
     max-width: 400px;
     max-height: 400px;
     border-radius: 8px;
