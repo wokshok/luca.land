@@ -41,14 +41,24 @@
               Your browser does not support the
               <code>audio</code> element.
       </audio>
-      <button onclick="togglePlay()">Play/pause</button>
+      <div class="player">
+        <div class="image"></div>
+        <div class="track">
+          <div class="title"><a href="#" target="_blank">L'om <i class="material-icons">launch</i></a></div>
+          <div class="author">Stefano Curto</div>
+        </div>
+        <button id="playPause" onclick="togglePlay()">
+          <i class="material-icons play">play_circle_outline</i>
+          <i class="material-icons pause">pause_circle_outline</i>
+        </button>
+      </div>
     </div>
 
     <div class="content-exp">
 
       <div class="hero centered vh100">
         <h1>The journey within oneself</h1>
-        <a href="#playExp" onclick="document.getElementById('music').play()"><i class="material-icons">play_arrow</i>Scroll and play</a>
+        <a href="#playExp" onclick="togglePlay()"><i class="material-icons">play_arrow</i>Scroll and play</a>
         <p class="muted"><i class="material-icons">headset</i>Use headphones for a better experience.</p>
         <p class="muted" style="max-width: 40vh">Explore the artistic venture of Stefano Curto through his works and music.</p>
         <i class="material-icons arrow muted" style="padding-top: 16px;">south</i>
@@ -105,13 +115,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha384-IqFDa6K9SJzsScnaQ67Y8rd0qD38ZdhpMnvvHT8HyIIo4zwrxa/YDL5edt/MmN8W" crossorigin="anonymous"></script>
   <script>
     var myAudio = document.getElementById("music");
+    var buttonAudio = document.getElementById("playPause");
     function togglePlay() {
+      buttonAudio.classList.toggle('active');
       return myAudio.paused ? myAudio.play() : myAudio.pause();
     };
 
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.set(".music-exp", {y: "+=100"})
+    gsap.set(".music-exp", {y: "+=150"})
     const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true}});
     tlbg.to(".bg-exp", { width: "150vw", height: "150vw" });
     tlbg.to(".music-exp", {y: 0, zIndex: 1});

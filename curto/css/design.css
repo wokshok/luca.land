@@ -58,13 +58,93 @@ a {
 
 /* MUSIC PLAYER */
 .music-exp {
-  width: 100%;
-  background-color: #090909;
   position: fixed;
-  bottom: 0;
+  bottom: 32px;
+  width: 100%;
+}
+
+.music-exp .player {
+  width: fit-content;
+  background-color: #111;
+  border: 1px solid #2f2f2f;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px -10px #000000;
+  font-size: 14px;
+
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.music-exp .image {
+  width: 32px;
+  height: 32px;
+  background-color: #333;
+  border-radius: 4px;
+  margin: 0 0 0 24px;
+}
+
+.music-exp button {
+  border: 0;
+  margin: 0 6px 0 16px;
+  color: white;
+  height: auto;
+  padding: 16px 24px 16px 24px;
+  border-radius: 10px;
+  opacity: .8;
+  display: flex;
+}
+
+.music-exp button:hover {
+  background-color: rgba(255,255,255,0.1);
+  opacity: 1;
+}
+
+.music-exp button i {
+  vertical-align: middle;
+  font-size: 32px;
+  opacity: 1;
+  transition: all .2s;
+}
+
+.music-exp button i.pause {
+  opacity: 0;
+  margin-left: -32px;
+}
+
+.music-exp button.active i.pause {
+  opacity: 1;
+}
+
+.music-exp button.active i.play {
+  opacity: 0;
+}
+
+.music-exp .track {
+  padding: 16px;
+}
+
+.music-exp .title a {
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+}
+
+.music-exp .title a:hover {
+  text-decoration: underline;
+}
+
+.music-exp .title a i {
+  font-size: 12px;
+  opacity: .8;
+  position: relative;
+  top: 1px;
+}
+
+.music-exp .author {
+  opacity: .7;
 }
 
 /* NAV */
