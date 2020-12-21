@@ -1,0 +1,136 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgba(240,240,240);
+}
+
+h1 {
+  font-weight: 900;
+}
+
+p, a {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.muted {
+  opacity: .4;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
+.bg-exp {
+  background-color: #121212;
+  position: fixed;
+  z-index: -100;
+
+  width: 70vh;
+  height: 70vh;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* border: 10vh solid white; */
+  box-sizing: border-box;
+}
+
+.music-exp {
+  width: 100%;
+  background-color: #090909;
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.suggestion h1 {
+  font-size: 20rem;
+  opacity: .8;
+}
+
+.suggestions p {
+  height: 100vh;
+  font-size: 20px;
+}
+
+.suggestions {
+  margin-bottom: 50vh;
+}
+
+.work {
+  position: relative;
+  height: 800vh;
+  display: flex;
+  justify-content: center;
+}
+
+.work p {
+  z-index: 100;
+  text-align: center;
+}
+
+.spicchi {
+  position: absolute;
+  width: 80vh;
+  height: 400vh;
+  padding-top: 10vh;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.spicchio  {
+  transform: rotate(0deg);
+  transform-origin: center center;
+
+  width: 80vh;
+  height: 80vh;
+
+  position: absolute;
+  display: block;
+  margin: auto;
+
+  background-color: #222;
+  clip-path: polygon(50% 50%, 45% 0%, 55% 0%);
+}
+
+.spicchi .spicchio:nth-child(2) {transform: rotate(60deg);}
+.spicchi .spicchio:nth-child(3) {transform: rotate(120deg);}
+.spicchi .spicchio:nth-child(4) {transform: rotate(180deg);}
+.spicchi .spicchio:nth-child(5) {transform: rotate(240deg);}
+.spicchi .spicchio:nth-child(6) {transform: rotate(300deg);}
+
+.stepwork, .finalwork {
+  width: 81vh;
+  height: 81vh;
+
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+
+  background-color: #222;
+  border-radius: 80vh;
+}
+
+.finalwork {
+  background-color: #444;
+  transform:  translateY(-70vh) scale(2);
+  z-index: 200;
+}

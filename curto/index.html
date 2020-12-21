@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Stefano Curto</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/design.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+  <div class="experience">
+    <div class="bg-exp"></div>
+    <div class="music-exp">
+      <audio id="music"
+          src="music.mp3">
+              Your browser does not support the
+              <code>audio</code> element.
+      </audio>
+      <button onclick="togglePlay()">Play/pause</button>
+    </div>
+
+    <div class="content-exp">
+
+      <div class="hero centered vh100">
+        <h1>A journey within oneself</h1>
+        <p>An artistic endevour by Stefano Curto</p>
+        <a href="#playExp" onclick="document.getElementById('music').play()"><i class="material-icons">play_arrow</i>Play the experience</a>
+        <p class="muted"><i class="material-icons">headset</i>Use headphones for a better experience</p>
+      </div>
+
+      <div id="playExp" class="suggestions centered">
+        <!-- <div class="suggestion sugg1 centered vh100">
+          <h1 class="light">Light</h1>
+        </div> -->
+
+        <p>If you look far out in the night sky, endless lights start talking to you</p>
+
+        <!-- <div class="suggestion sugg2 centered vh100">
+          <h1 class="caos">Caos</h1>
+        </div> -->
+
+        <p>And if you close your eyes, you can still hear them</p>
+
+        <!-- <div class="suggestion sugg3 centered vh100">
+          <h1 class="cosmo">Cosmo</h1>
+        </div> -->
+
+        <p>Make space in your mind through meditation<br>Listen to them carefully</p>
+
+        <!-- <div class="suggestion sugg4 centered vh100">
+          <h1 class="meditation">Meditation</h1>
+        </div> -->
+        
+        <p>You'll find they know the secret about caos and cosmos</p>
+      </div>
+
+      <div class="work">
+        <div class="spicchi">
+            <div class="spicchio"></div>
+            <div class="spicchio"></div>
+            <div class="spicchio"></div>
+            <div class="spicchio"></div>
+            <div class="spicchio"></div>
+            <div class="spicchio"></div>
+
+            <div class="stepwork"></div>
+            <div class="finalwork"></div>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha384-aeOf8PUQ30Impyyio8FDxFHefK/3nHBJWjuT1u1FnJHZU+ro9q9E9cXUzfWBk0kT" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha384-sEM5g9GXGkLDax3gEbZeFpE7MrdX065K5lKbueFlZ9eUTSIQaLs9Be4NGq/gQ54w" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha384-IqFDa6K9SJzsScnaQ67Y8rd0qD38ZdhpMnvvHT8HyIIo4zwrxa/YDL5edt/MmN8W" crossorigin="anonymous"></script>
+  <script>
+    var myAudio = document.getElementById("music");
+    function togglePlay() {
+      return myAudio.paused ? myAudio.play() : myAudio.pause();
+    };
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set(".music-exp", {y: "+=100"})
+    const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true,}});
+    tlbg.to(".bg-exp", { width: "150vw", height: "150vw" });
+    tlbg.to(".music-exp", {y: 0, zIndex: 1});
+
+    // gsap.to(".light", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg1", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
+    // gsap.to(".caos", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg2", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
+    // gsap.to(".cosmo", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg3", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
+    // gsap.to(".meditation", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg4", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
+
+    gsap.set(".spicchio, .stepwork, .finalwork", {opacity: 0});
+    gsap.to(".spicchi", {scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}})
+    ScrollTrigger.batch(".spicchio", {
+      start: "top 20vh",
+      end: "bottom top",
+      trigger: ".spicchi",
+      // markers: true,
+      scrub: true,
+      onEnter: batch => gsap.to(batch, {opacity: 1, stagger: 0.2, duration: 0.5}),
+    });
+
+    var scalati = gsap.utils.toArray(".spicchio, .stepwork"); 
+    const tlstepwork = gsap.timeline({scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
+    tlstepwork.to(".stepwork", {opacity: 1, delay: .5})
+    .to(scalati, {scale: 2, y: "-70vh"},)
+    .to(".finalwork", {opacity: 1, delay: .5})
+
+  </script>
+</body>
+</html>
