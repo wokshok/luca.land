@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/design.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Saira:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Favicon -->
@@ -23,6 +25,14 @@
 </head>
 
 <body>
+  <nav>
+    <ul>
+      <li><a class="nav-link active" href="#">Home</a></li>
+      <li><a class="nav-link expand" href="#">Art</a></li>
+      <li><a class="nav-link" href="#">Music</a></li>
+      <li><a class="nav-link" href="#">About Stefano Curto</a></li>
+    </ul>
+  </nav>
   <div class="experience">
     <div class="bg-exp"></div>
     <div class="music-exp">
@@ -37,10 +47,11 @@
     <div class="content-exp">
 
       <div class="hero centered vh100">
-        <h1>A journey within oneself</h1>
-        <p>An artistic endevour by Stefano Curto</p>
-        <a href="#playExp" onclick="document.getElementById('music').play()"><i class="material-icons">play_arrow</i>Play the experience</a>
-        <p class="muted"><i class="material-icons">headset</i>Use headphones for a better experience</p>
+        <h1>The journey within oneself</h1>
+        <a href="#playExp" onclick="document.getElementById('music').play()"><i class="material-icons">play_arrow</i>Scroll and play</a>
+        <p class="muted"><i class="material-icons">headset</i>Use headphones for a better experience.</p>
+        <p class="muted">Explore the artistic venture of Stefano Curto through his works and music.</p>
+        <i class="material-icons arrow muted" style="padding-top: 16px;">south</i>
       </div>
 
       <div id="playExp" class="suggestions centered">
@@ -69,7 +80,7 @@
         <p>You'll find they know the secret about caos and cosmos</p>
       </div>
 
-      <div class="work">
+      <!-- <div class="work">
         <div class="spicchi">
             <div class="spicchio"></div>
             <div class="spicchio"></div>
@@ -83,7 +94,7 @@
         </div>
 
         <p>Lorem ipsum dolor sit amet</p>
-      </div>
+      </div> -->
 
 
     </div>
@@ -101,7 +112,7 @@
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.set(".music-exp", {y: "+=100"})
-    const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true,}});
+    const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true}});
     tlbg.to(".bg-exp", { width: "150vw", height: "150vw" });
     tlbg.to(".music-exp", {y: 0, zIndex: 1});
 
