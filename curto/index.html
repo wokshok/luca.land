@@ -58,7 +58,7 @@
 
       <div class="hero centered vh100">
         <h1>The journey within oneself</h1>
-        <a href="#playExp" onclick="togglePlay()"><i class="material-icons">play_arrow</i>Scroll and play</a>
+        <a href="#playExp" onclick="togglePlay()"><i class="material-icons">play_arrow</i>Play the experience</a>
         <p class="muted"><i class="material-icons">headset</i>Use headphones for a better experience.</p>
         <p class="muted" style="max-width: 40vh">Explore the artistic venture of Stefano Curto through his works and music.</p>
         <i class="material-icons arrow muted" style="padding-top: 16px;">south</i>
@@ -185,28 +185,32 @@
     // .to(".finalwork", {opacity: 1, delay: .5})
 
     gsap.set(".drawing .spicchio, .stepwork, .final", {opacity: 0});
-    const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true, markers: true}});
+    const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
-    tlwork.to(".s2", {opacity: 1, duration: .5});
-    tlwork.to(".s3", {opacity: 1, duration: .5});
-    tlwork.to(".s4", {opacity: 1, duration: .5});
-    tlwork.to(".s5", {opacity: 1, duration: .5});
-    tlwork.to(".s6", {opacity: 1, duration: .5});
-    tlwork.to(".s7", {opacity: 1, duration: .5});
-    tlwork.to(".s8", {opacity: 1, duration: .5});
-    tlwork.to(".s9", {opacity: 1, duration: .5});
-    tlwork.to(".s10", {opacity: 1, duration: .5});
-    tlwork.to(".s11", {opacity: 1, duration: .5});
-    tlwork.to(".s12", {opacity: 1, duration: .5});
-    tlwork.to(".s13", {opacity: 1, duration: .5});
-    tlwork.to(".s14", {opacity: 1, duration: .5});
-    tlwork.to(".s15", {opacity: 1, duration: .5});
-    tlwork.to(".s16", {opacity: 1, duration: .5});
-    tlwork.to(".s17", {opacity: 1, duration: .5});
-    tlwork.to(".s18", {opacity: 1, duration: .5});
+    tlwork.to(".s2", {opacity: 1, duration: .1});
+    tlwork.to(".s3", {opacity: 1, duration: .1});
+    tlwork.to(".s4", {opacity: 1, duration: .1});
+    tlwork.to(".s5", {opacity: 1, duration: .1});
+    tlwork.to(".s6", {opacity: 1, duration: .1});
+    tlwork.to(".s7", {opacity: 1, duration: .1});
+    tlwork.to(".s8", {opacity: 1, duration: .1});
+    tlwork.to(".s9", {opacity: 1, duration: .1});
+    tlwork.to(".s10", {opacity: 1, duration: .1});
+    tlwork.to(".s11", {opacity: 1, duration: .1});
+    tlwork.to(".s12", {opacity: 1, duration: .1});
+    tlwork.to(".s13", {opacity: 1, duration: .1});
+    tlwork.to(".s14", {opacity: 1, duration: .1});
+    tlwork.to(".s15", {opacity: 1, duration: .1});
+    tlwork.to(".s16", {opacity: 1, duration: .1});
+    tlwork.to(".s17", {opacity: 1, duration: .1});
+    tlwork.to(".s18", {opacity: 1, duration: .1});
 
-    tlwork.to(".stepwork", {opacity: 1, duration: 2});
-    tlwork.to(".final", {opacity: 1, duration: 2});
+    tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-125px"})
+    tlwork.to(".stepwork", {opacity: 1, duration: 1});
+    tlwork.to(".drawing", {opacity: 0, duration: .1});
+    
+    tlwork.to(".stepwork", {scale: 1.5, y: "0", x: "-76px"})
+    tlwork.to(".final", {opacity: 1, duration: 1});
 
   </script>
 </body>

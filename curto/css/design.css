@@ -41,14 +41,6 @@ a {
   height: 100vh;
 }
 
-.meditation {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  letter-spacing: 4px;
-}
-
 /* BACKGROUND ANIMATION */
 .bg-exp {
   background-color: #121212;
@@ -263,6 +255,13 @@ nav ul li a.expand:hover::after {
   margin-bottom: 50vh;
 }
 
+.meditation {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 
 /* WORKS */
 .work {
@@ -287,7 +286,7 @@ nav ul li a.expand:hover::after {
 }
 
 .circle {
-  transform: scale(1.5) translateY(76px);
+  transform: scale(1.5) translateY(76px) translateX(-7px);
   transform-origin: center;
   position: absolute;
   height: 520px;
