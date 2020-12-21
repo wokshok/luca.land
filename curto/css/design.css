@@ -41,6 +41,14 @@ a {
   height: 100vh;
 }
 
+.meditation {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 4px;
+}
+
 /* BACKGROUND ANIMATION */
 .bg-exp {
   background-color: #121212;
@@ -84,6 +92,8 @@ a {
   background-color: #333;
   border-radius: 4px;
   margin: 0 0 0 24px;
+  background-image: url('../images/album.png');
+  background-size: cover;
 }
 
 .music-exp button {
