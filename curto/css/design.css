@@ -121,7 +121,7 @@ nav ul li a.expand:hover::after {
 /* HERO */
 .hero h1 {
   font-family: 'Jost', sans-serif;
-  font-size: 64px;
+  font-size: 6vh;
   max-width: 60vh;
   text-transform: uppercase;
   line-height: 140%;
@@ -151,7 +151,6 @@ nav ul li a.expand:hover::after {
 
 .hero p {
   margin-bottom: 0;
-  max-width: 40vh;
   font-size: 18px;
 }
 
