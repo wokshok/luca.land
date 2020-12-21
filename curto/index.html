@@ -90,21 +90,55 @@
         <p>You'll find they know the secret about caos and cosmos</p>
       </div>
 
-      <!-- <div class="work">
-        <div class="spicchi">
-            <div class="spicchio"></div>
-            <div class="spicchio"></div>
-            <div class="spicchio"></div>
-            <div class="spicchio"></div>
-            <div class="spicchio"></div>
-            <div class="spicchio"></div>
+      <div class="work">
+        <div class="spicchi drawing">
+            <div class="spicchio s1"></div>
+            <div class="spicchio s2"></div>
+            <div class="spicchio s3"></div>
+            <div class="spicchio s4"></div>
+            <div class="spicchio s5"></div>
+            <div class="spicchio s6"></div>
 
-            <div class="stepwork"></div>
-            <div class="finalwork"></div>
+            <div class="spicchio s7"></div>
+            <div class="spicchio s8"></div>
+            <div class="spicchio s9"></div>
+            <div class="spicchio s10"></div>
+            <div class="spicchio s11"></div>
+            <div class="spicchio s12"></div>
+
+            <div class="spicchio s13"></div>
+            <div class="spicchio s14"></div>
+            <div class="spicchio s15"></div>
+            <div class="spicchio s16"></div>
+            <div class="spicchio s17"></div>
+            <div class="spicchio s18"></div>
         </div>
 
-        <p>Lorem ipsum dolor sit amet</p>
-      </div> -->
+        <div class="spicchi stepwork">
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+          <div class="spicchio"></div>
+        </div>
+
+        <div class="circle final"></div>
+      </div>
 
 
     </div>
@@ -131,24 +165,48 @@
     // gsap.to(".light", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg1", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
     // gsap.to(".caos", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg2", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
     // gsap.to(".cosmo", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg3", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
-    gsap.to(".meditation", {letterSpacing: "48px", opacity: "0", scrollTrigger: {trigger: ".meditation", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
+    gsap.to(".meditation", {letterSpacing: "16px", opacity: "0", scrollTrigger: {trigger: ".meditation", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
 
-    gsap.set(".spicchio, .stepwork, .finalwork", {opacity: 0});
-    gsap.to(".spicchi", {scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}})
-    ScrollTrigger.batch(".spicchio", {
-      start: "top 20vh",
-      end: "bottom top",
-      trigger: ".spicchi",
-      // markers: true,
-      scrub: true,
-      onEnter: batch => gsap.to(batch, {opacity: 1, stagger: 0.2, duration: 0.5}),
-    });
+    // gsap.set(".spicchio, .stepwork, .finalwork", {opacity: 0});
+    // gsap.to(".spicchi", {scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}})
+    // ScrollTrigger.batch(".spicchio", {
+    //   start: "top 20vh",
+    //   end: "bottom top",
+    //   trigger: ".spicchi",
+    //   // markers: true,
+    //   scrub: true,
+    //   onEnter: batch => gsap.to(batch, {opacity: 1, stagger: 0.2, duration: 0.5}),
+    // });
 
-    var scalati = gsap.utils.toArray(".spicchio, .stepwork"); 
-    const tlstepwork = gsap.timeline({scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
-    tlstepwork.to(".stepwork", {opacity: 1, delay: .5})
-    .to(scalati, {scale: 2, y: "-70vh"},)
-    .to(".finalwork", {opacity: 1, delay: .5})
+    // var scalati = gsap.utils.toArray(".spicchio, .stepwork"); 
+    // const tlstepwork = gsap.timeline({scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
+    // tlstepwork.to(".stepwork", {opacity: 1, delay: .5})
+    // .to(scalati, {scale: 2, y: "-70vh"},)
+    // .to(".finalwork", {opacity: 1, delay: .5})
+
+    gsap.set(".drawing .spicchio, .stepwork, .final", {opacity: 0});
+    const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true, markers: true}});
+    tlwork.to(".s1", {opacity: 1, duration: .5});
+    tlwork.to(".s2", {opacity: 1, duration: .5});
+    tlwork.to(".s3", {opacity: 1, duration: .5});
+    tlwork.to(".s4", {opacity: 1, duration: .5});
+    tlwork.to(".s5", {opacity: 1, duration: .5});
+    tlwork.to(".s6", {opacity: 1, duration: .5});
+    tlwork.to(".s7", {opacity: 1, duration: .5});
+    tlwork.to(".s8", {opacity: 1, duration: .5});
+    tlwork.to(".s9", {opacity: 1, duration: .5});
+    tlwork.to(".s10", {opacity: 1, duration: .5});
+    tlwork.to(".s11", {opacity: 1, duration: .5});
+    tlwork.to(".s12", {opacity: 1, duration: .5});
+    tlwork.to(".s13", {opacity: 1, duration: .5});
+    tlwork.to(".s14", {opacity: 1, duration: .5});
+    tlwork.to(".s15", {opacity: 1, duration: .5});
+    tlwork.to(".s16", {opacity: 1, duration: .5});
+    tlwork.to(".s17", {opacity: 1, duration: .5});
+    tlwork.to(".s18", {opacity: 1, duration: .5});
+
+    tlwork.to(".stepwork", {opacity: 1, duration: 2});
+    tlwork.to(".final", {opacity: 1, duration: 2});
 
   </script>
 </body>

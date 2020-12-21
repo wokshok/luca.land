@@ -263,49 +263,86 @@ nav ul li a.expand:hover::after {
   margin-bottom: 50vh;
 }
 
+
+/* WORKS */
 .work {
   position: relative;
-  height: 800vh;
+  height: 1200vh;
   display: flex;
   justify-content: center;
 }
 
-.work p {
-  z-index: 100;
-  text-align: center;
-}
-
 .spicchi {
-  position: absolute;
+  /* position: absolute;
   width: 80vh;
   height: 400vh;
   padding-top: 10vh;
   margin: 0 auto;
-  z-index: 0;
+  z-index: 0; */
+
+  transform: scale(1.5) translateX(-44px);
+  transform-origin: center;
+  position: absolute;
+  top: 10vh;
+}
+
+.circle {
+  transform: scale(1.5) translateY(76px);
+  transform-origin: center;
+  position: absolute;
+  height: 520px;
+  width: 520px;
+  top: 10vh;
 }
 
 .spicchio  {
   transform: rotate(0deg);
-  transform-origin: center center;
+  transform-origin: center bottom;
 
-  width: 80vh;
-  height: 80vh;
+  width: 87px;
+  height: 250px;
 
   position: absolute;
   display: block;
   margin: auto;
 
-  background-color: #222;
-  clip-path: polygon(50% 50%, 45% 0%, 55% 0%);
+  background-color: transparent;
+  background-size: cover;
+  /* clip-path: polygon(50% 50%, 45% 0%, 55% 0%); */
 }
 
-.spicchi .spicchio:nth-child(2) {transform: rotate(60deg);}
-.spicchi .spicchio:nth-child(3) {transform: rotate(120deg);}
-.spicchi .spicchio:nth-child(4) {transform: rotate(180deg);}
-.spicchi .spicchio:nth-child(5) {transform: rotate(240deg);}
-.spicchi .spicchio:nth-child(6) {transform: rotate(300deg);}
+.spicchi .spicchio:nth-child(2) {transform: rotate(20deg);}
+.spicchi .spicchio:nth-child(3) {transform: rotate(40deg);}
+.spicchi .spicchio:nth-child(4) {transform: rotate(60deg);}
+.spicchi .spicchio:nth-child(5) {transform: rotate(80deg);}
+.spicchi .spicchio:nth-child(6) {transform: rotate(100deg);}
+.spicchi .spicchio:nth-child(7) {transform: rotate(120deg);}
+.spicchi .spicchio:nth-child(8) {transform: rotate(140deg);}
+.spicchi .spicchio:nth-child(9) {transform: rotate(160deg);}
+.spicchi .spicchio:nth-child(10) {transform: rotate(180deg);}
+.spicchi .spicchio:nth-child(11) {transform: rotate(200deg);}
+.spicchi .spicchio:nth-child(12) {transform: rotate(220deg);}
+.spicchi .spicchio:nth-child(13) {transform: rotate(240deg);}
+.spicchi .spicchio:nth-child(14) {transform: rotate(260deg);}
+.spicchi .spicchio:nth-child(15) {transform: rotate(280deg);}
+.spicchi .spicchio:nth-child(16) {transform: rotate(300deg);}
+.spicchi .spicchio:nth-child(17) {transform: rotate(320deg);}
+.spicchi .spicchio:nth-child(18) {transform: rotate(340deg);}
 
-.stepwork, .finalwork {
+.spicchi.drawing .spicchio {
+  background-image: url('../images/spicchio.png');
+}
+
+.spicchi.stepwork .spicchio {
+  background-image: url('../images/stepwork.png');
+}
+
+.circle.final {
+  background-image: url('../images/final.png');
+  background-size: cover;
+}
+
+/* .stepwork, .finalwork {
   width: 81vh;
   height: 81vh;
 
@@ -321,4 +358,4 @@ nav ul li a.expand:hover::after {
   background-color: #444;
   transform:  translateY(-70vh) scale(2);
   z-index: 200;
-}
+} */
