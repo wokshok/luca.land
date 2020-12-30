@@ -319,14 +319,15 @@ nav ul li a.expand:hover::after {
   transform: translate(-50%, 0);
   left: 50%;
   z-index: 100;
+  text-shadow: 0 0 16px black;
 }
 
 .circle {
-  transform: scale(1.5) translateY(76px) translateX(-7px);
+  transform: scale(1.5) translateY(100px) translateX(-10px);
   transform-origin: center;
   position: absolute;
-  height: 520px;
-  width: 520px;
+  height: 502px;
+  width: 502px;
   top: 10vh;
 }
 
@@ -373,7 +374,7 @@ nav ul li a.expand:hover::after {
 }
 
 .circle.final {
-  background-image: url('../images/final.png');
+  background-image: url('../images/thetart.png');
   background-size: cover;
 }
 

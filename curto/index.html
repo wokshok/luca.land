@@ -175,7 +175,7 @@
     gsap.set(".drawing .spicchio, .stepwork, .final", {opacity: 0});
     gsap.set(".t_1", {top: "110vh"});
     gsap.set(".t_2", {top: "110vh"});
-    gsap.set(".final", {scale: 3, y: "-50vh"});
+    gsap.set(".final", {scale: 3, y: "-49vh"});
 
     const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
@@ -202,12 +202,19 @@
 
     tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-135px"})
     tlwork.to(".stepwork", {opacity: 1, duration: 1});
-    tlwork.to(".t_2", {top: "-10vh"});
     tlwork.to(".drawing", {opacity: 0, duration: .1});
+    tlwork.to(".t_2", {top: "50vh", duration: .5}, "-=1");
+    tlwork.to(".t_2", {top: "45vh", duration: .2}), "-=.9";
+    tlwork.to(".t_2", {top: "-10vh", duration: .5}), "-=.8";
+    tlwork.to(".stepwork", {y: "-50vh", duration: 1}, "-=1");
+    tlwork.to(".final", {y: "1vh", duration: 1}, "-=1");
+    tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
+    
     
     // tlwork.to(".stepwork", {scale: 1.5, y: "0", x: "-76px"})
-    tlwork.to(".final", {opacity: 1, duration: 1});
-    tlwork.to(".final", {scale: 5, y: "0vh", duration: 1});
+    // tlwork.to(".final", {opacity: 1, duration: 1});
+    tlwork.to(".stepwork", {opacity: 0, duration: .1});
+    tlwork.to(".final", {scale: 5, opacity: 0, duration: 1});
 
   </script>
 </body>
