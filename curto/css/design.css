@@ -43,7 +43,10 @@ a {
 
 /* BACKGROUND ANIMATION */
 .bg-exp {
-  background-color: #121212;
+  background-color: #000;
+  /* background-image: url(../images/sfondo.jpg);
+  background-size: cover;
+  background-position: center center; */
   position: fixed;
   z-index: -100;
 
@@ -54,6 +57,40 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bg-exp div {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.bg_1 {
+  background-size: cover;
+  background-image: url("../images/space_bg.jpg");
+  filter: brightness(80%);
+}
+
+.bg_2 {
+  background-color: #070707;
+  background-image: url("../images/sleep_bg.svg");
+  background-position: center;
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+.bg_3 {
+  background-color: #000;
+}
+
+.bg_4 {
+  background-image: url("../images/dots_bg.svg");
+  background-size: 80px 80px;
 }
 
 /* MUSIC PLAYER */
@@ -241,25 +278,17 @@ nav ul li a.expand:hover::after {
 }
 
 /* NARRATIVE */
-.suggestion h1 {
-  font-size: 20rem;
-  opacity: .8;
-}
-
-.suggestions p {
-  height: 100vh;
-  font-size: 20px;
-}
-
 .suggestions {
   margin-bottom: 50vh;
 }
 
-.meditation {
+.p_1, .p_2, .p_3, .p_4 {
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  font-size: 20px;
 }
 
 
@@ -283,6 +312,13 @@ nav ul li a.expand:hover::after {
   transform-origin: center;
   position: absolute;
   top: 10vh;
+}
+
+.testi * {
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  z-index: 100;
 }
 
 .circle {

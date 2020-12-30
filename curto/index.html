@@ -33,8 +33,15 @@
       <li><a class="nav-link" href="#">About Stefano Curto</a></li>
     </ul>
   </nav>
+
   <div class="experience">
-    <div class="bg-exp"></div>
+    <div class="bg-exp">
+      <div class="bg_1"></div>
+      <div class="bg_2"></div>
+      <div class="bg_3"></div>
+      <div class="bg_4"></div>
+    </div>
+
     <div class="music-exp">
       <audio id="music"
           src="music.mp3">
@@ -55,7 +62,6 @@
     </div>
 
     <div class="content-exp">
-
       <div class="hero centered vh100">
         <h1>The journey within oneself</h1>
         <a href="#playExp" onclick="togglePlay()"><i class="material-icons">play_arrow</i>Play the experience</a>
@@ -65,29 +71,13 @@
       </div>
 
       <div id="playExp" class="suggestions centered">
-        <!-- <div class="suggestion sugg1 centered vh100">
-          <h1 class="light">Light</h1>
-        </div> -->
+        <p class="p_1">If you look far out in the night sky, endless lights start talking to you</p>
 
-        <p>If you look far out in the night sky, endless lights start talking to you</p>
+        <p class="p_2">And if you close your eyes, you can still hear them</p>
 
-        <!-- <div class="suggestion sugg2 centered vh100">
-          <h1 class="caos">Caos</h1>
-        </div> -->
-
-        <p>And if you close your eyes, you can still hear them</p>
-
-        <!-- <div class="suggestion sugg3 centered vh100">
-          <h1 class="cosmo">Cosmo</h1>
-        </div> -->
-
-        <p class="meditation">Meditate<br><br>Make space in your mind<br><br>Listen to them carefully</p>
-
-        <!-- <div class="suggestion sugg4 centered vh100">
-          <h1 class="meditation">Meditation</h1>
-        </div> -->
+        <p class="p_3">Meditate<br><br>Make space in your mind<br><br>Listen to them carefully</p>
         
-        <p>You'll find they know the secret about caos and cosmos</p>
+        <p class="p_4">You'll find they know the secret about caos and cosmos</p>
       </div>
 
       <div class="work">
@@ -112,6 +102,11 @@
             <div class="spicchio s16"></div>
             <div class="spicchio s17"></div>
             <div class="spicchio s18"></div>
+        </div>
+
+        <div class="testi">
+          <h1 class="t_1">Lorem ipsum dolor sit amet</h1>
+          <h1 class="t_2">Lorem ipsumetto dolor sit amet</h1>         
         </div>
 
         <div class="spicchi stepwork">
@@ -139,9 +134,8 @@
 
         <div class="circle final"></div>
       </div>
-
-
     </div>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha384-aeOf8PUQ30Impyyio8FDxFHefK/3nHBJWjuT1u1FnJHZU+ro9q9E9cXUzfWBk0kT" crossorigin="anonymous"></script>
@@ -157,60 +151,63 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.set(".music-exp", {y: "+=150"})
+    /* INTRO */
+    gsap.set(".music-exp", {y: "+=150"});
     const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true}});
     tlbg.to(".bg-exp", { width: "120vw", height: "120vw" });
     tlbg.to(".music-exp", {y: 0, zIndex: 1});
 
-    // gsap.to(".light", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg1", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
-    // gsap.to(".caos", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg2", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
-    // gsap.to(".cosmo", {scale: 2, opacity: 0, scrollTrigger: {trigger: ".sugg3", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
-    gsap.to(".meditation", {letterSpacing: "16px", opacity: "0", scrollTrigger: {trigger: ".meditation", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
+    /* SUGGESTIONS AND BACKGROUND */
+    gsap.to(".p_1", {scrollTrigger: {trigger: ".p_1", start: "top top", end: "bottom top"}});
+    gsap.to(".p_2", {scrollTrigger: {trigger: ".p_2", start: "top top", end: "bottom top"}});
+    gsap.to(".p_3", {letterSpacing: "16px", opacity: "0", scrollTrigger: {trigger: ".p_3", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true, anticipatePin: .5}});
+    gsap.to(".p_4", {scrollTrigger: {trigger: ".p_4", start: "top top", end: "bottom top", scrub: true}});
 
-    // gsap.set(".spicchio, .stepwork, .finalwork", {opacity: 0});
-    // gsap.to(".spicchi", {scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}})
-    // ScrollTrigger.batch(".spicchio", {
-    //   start: "top 20vh",
-    //   end: "bottom top",
-    //   trigger: ".spicchi",
-    //   // markers: true,
-    //   scrub: true,
-    //   onEnter: batch => gsap.to(batch, {opacity: 1, stagger: 0.2, duration: 0.5}),
-    // });
+    gsap.set(".bg-exp > div", {opacity: 0});
+    gsap.to(".bg_1", {opacity: 1, scrollTrigger: {trigger: ".hero", start: "bottom center", end: "bottom top", scrub: true}});
+    gsap.to(".bg_2", {opacity: 1, scrollTrigger: {trigger: ".p_1", start: "bottom center", end: "bottom top", scrub: true}})
+    gsap.to(".bg_3", {opacity: 1, scrollTrigger: {trigger: ".p_2", start: "bottom center", end: "bottom top", scrub: true}})
+    const tlp4 = gsap.timeline({scrollTrigger: {trigger: ".p_4", start: "top center", end: "bottom top", scrub: true}});
+    tlp4.to(".bg_4", {opacity: 1});
+    tlp4.to(".bg_4", {opacity: 0});
 
-    // var scalati = gsap.utils.toArray(".spicchio, .stepwork"); 
-    // const tlstepwork = gsap.timeline({scrollTrigger: {trigger: ".spicchi", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false}});
-    // tlstepwork.to(".stepwork", {opacity: 1, delay: .5})
-    // .to(scalati, {scale: 2, y: "-70vh"},)
-    // .to(".finalwork", {opacity: 1, delay: .5})
-
+    /* WORK */
     gsap.set(".drawing .spicchio, .stepwork, .final", {opacity: 0});
+    gsap.set(".t_1", {top: "110vh"});
+    gsap.set(".t_2", {top: "110vh"});
+    gsap.set(".final", {scale: 3, y: "-50vh"});
+
     const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
-    tlwork.to(".s2", {opacity: 1, duration: .1});
-    tlwork.to(".s3", {opacity: 1, duration: .1});
-    tlwork.to(".s4", {opacity: 1, duration: .1});
-    tlwork.to(".s5", {opacity: 1, duration: .1});
-    tlwork.to(".s6", {opacity: 1, duration: .1});
-    tlwork.to(".s7", {opacity: 1, duration: .1});
-    tlwork.to(".s8", {opacity: 1, duration: .1});
-    tlwork.to(".s9", {opacity: 1, duration: .1});
-    tlwork.to(".s10", {opacity: 1, duration: .1});
-    tlwork.to(".s11", {opacity: 1, duration: .1});
-    tlwork.to(".s12", {opacity: 1, duration: .1});
-    tlwork.to(".s13", {opacity: 1, duration: .1});
-    tlwork.to(".s14", {opacity: 1, duration: .1});
-    tlwork.to(".s15", {opacity: 1, duration: .1});
+    tlwork.to(".t_1", {top: "50vh", duration: .5});
+    tlwork.to(".t_1", {top: "45vh", duration: .5});
+    tlwork.to(".t_1", {top: "-10vh", duration: .5});
+    tlwork.to(".s2", {opacity: 1, duration: .1}, "-=1.4");
+    tlwork.to(".s3", {opacity: 1, duration: .1}, "-=1.3");
+    tlwork.to(".s4", {opacity: 1, duration: .1}, "-=1.2");
+    tlwork.to(".s5", {opacity: 1, duration: .1}, "-=1.1");
+    tlwork.to(".s6", {opacity: 1, duration: .1}, "-=1");
+    tlwork.to(".s7", {opacity: 1, duration: .1}, "-=.9");
+    tlwork.to(".s8", {opacity: 1, duration: .1}, "-=.8");
+    tlwork.to(".s9", {opacity: 1, duration: .1}, "-=.7");
+    tlwork.to(".s10", {opacity: 1, duration: .1}, "-=.6");
+    tlwork.to(".s11", {opacity: 1, duration: .1}, "-=.5");
+    tlwork.to(".s12", {opacity: 1, duration: .1}, "-=.4");
+    tlwork.to(".s13", {opacity: 1, duration: .1}, "-=.3");
+    tlwork.to(".s14", {opacity: 1, duration: .1}, "-=.2");
+    tlwork.to(".s15", {opacity: 1, duration: .1}, "-=.1");
     tlwork.to(".s16", {opacity: 1, duration: .1});
     tlwork.to(".s17", {opacity: 1, duration: .1});
     tlwork.to(".s18", {opacity: 1, duration: .1});
 
-    tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-125px"})
+    tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-135px"})
     tlwork.to(".stepwork", {opacity: 1, duration: 1});
+    tlwork.to(".t_2", {top: "-10vh"});
     tlwork.to(".drawing", {opacity: 0, duration: .1});
     
-    tlwork.to(".stepwork", {scale: 1.5, y: "0", x: "-76px"})
+    // tlwork.to(".stepwork", {scale: 1.5, y: "0", x: "-76px"})
     tlwork.to(".final", {opacity: 1, duration: 1});
+    tlwork.to(".final", {scale: 5, y: "0vh", duration: 1});
 
   </script>
 </body>
