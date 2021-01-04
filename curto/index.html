@@ -164,6 +164,26 @@
       <div class="c_4"></div>
     </div>
 
+    <div class="extras">
+      <div class="about-stefano">
+        <img src="images/about.png">
+        <div class="text">
+          <p class="title">About Stefano</p>
+          <p class="subtitle">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo.</p>
+          <button>Discover more</button>
+        </div>
+      </div>
+      <div class="about-music">
+        <img src="images/about-music.png">
+        <div class="text">
+          <p class="title">Music as a muse</p>
+          <p class="subtitle">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
+          <button>Discover more</button>
+          <button class="secondary">Listen on CDbaby</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha384-aeOf8PUQ30Impyyio8FDxFHefK/3nHBJWjuT1u1FnJHZU+ro9q9E9cXUzfWBk0kT" crossorigin="anonymous"></script>
@@ -185,7 +205,9 @@
     gsap.set("#expButton", {boxShadow: "0 0 0 0 white"});
     const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true}});
     tlbg.to(".bg-exp", { width: "120vw", height: "120vw" });
+    tlbg.to(".bg-exp", { borderRadius: 0 });
     tlbg.to(".music-exp", {y: 0, zIndex: 1});
+    tlbg.to(".music-exp", {y: "+=150", scrollTrigger: {trigger: ".work", start: "bottom bottom", end: "bottom top", scrub: true}});
 
     /* SUGGESTIONS AND BACKGROUND */
     gsap.to(".p_1", {scrollTrigger: {trigger: ".p_1", start: "top top", end: "bottom top"}});

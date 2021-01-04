@@ -490,3 +490,95 @@ nav ul li a.expand:hover::after {
 /* .c_2 {background-image: url('../images/costellazioni-03.png');}
 .c_3 {background-image: url('../images/costellazioni-04.png');} */
 
+
+.extras {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  top: -500vh;
+  padding: 200px 0 800px;
+}
+
+
+.extras .text {
+  margin-left: 80px;
+  color: #121212;
+}
+
+.extras .title {
+  font-size: 44px;
+  font-family: 'Jost', sans-serif;
+  color: #121212;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 60px 0 0;
+}
+
+.extras .subtitle {
+  font-size: 24px;
+  line-height: 170%;
+  font-family: 'Saira', sans-serif;
+  color: #121212;
+  font-weight: 400;
+  text-transform: none;
+  opacity: .8;
+  padding-right: 60px;
+  margin-bottom: 40px;
+}
+
+
+.extras button {
+  border: 0;
+  background: white;
+  color: black;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 44px;
+  text-transform: none;
+  padding: 0 20px;
+  letter-spacing: 0;
+  font-size: 18px;
+  outline: 0;
+  height: auto;
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.extras button.secondary {
+  background: transparent;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  margin-left: 8px;
+}
+
+
+.extras > div {
+  background-color: #f8f8f8;
+  margin: 0 auto 60px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  align-items: stretch;
+}
+
+.extras img {
+  width: 30%;
+  border-radius: 8px 0 0 8px;
+}
+
+.extras .about-stefano img {
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.25) brightness(0.95);
+}
+
+.extras .about-music img {
+  object-fit: contain;
+  width: calc(30% + 42px);
+}
+
+.extras .about-music .text {
+  margin-left: 38px;
+}
+
