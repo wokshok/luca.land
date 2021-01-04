@@ -400,6 +400,7 @@ nav ul li a.expand:hover::after {
   transform-origin: center;
   position: absolute;
   background-size: cover;
+  z-index: 2;
 }
 
 .slide.s_1 {
@@ -439,27 +440,53 @@ nav ul li a.expand:hover::after {
   /* background-color: #121212; */
   /* height: 70vh; */
   width: 70%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.costellazioni > div > p {
-  text-align: center;
-  align-self: center;
+.costellazioni img {
+  max-width: 100%;
+  height: auto;
+}
+
+.costellazioni p.title {
   justify-content: center;
-  align-items: center;
-  padding-top: 60vh;
-  margin-bottom: 20vh;
+  margin: 0;
   /* position: absolute; */
   font-weight: 700;
-  font-size: 32px;
+  font-size: 40px;
+  text-transform: uppercase;
   font-family: 'Jost';
 }
 
-.c_1 {background-image: url('../images/costellazioni-02.png');}
-.c_2 {background-image: url('../images/costellazioni-03.png');}
-.c_3 {background-image: url('../images/costellazioni-04.png');}
+.costellazioni p.subtitle {
+  opacity: .7;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.costellazioni button {
+  border: 0;
+  background: white;
+  color: black;
+  justify-content: center;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 44px;
+  text-transform: none;
+  padding: 0 20px;
+  margin: 36px auto 120px;
+  letter-spacing: 0;
+  font-size: 18px;
+  outline: 0;
+  height: auto;
+  display: block;
+}
+
+/* .c_1 .image {background-image: url('../images/costellazioni-02.png');} */
+/* .c_2 {background-image: url('../images/costellazioni-03.png');}
+.c_3 {background-image: url('../images/costellazioni-04.png');} */
 
