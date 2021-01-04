@@ -220,7 +220,7 @@
     const bg1 = gsap.timeline({scrollTrigger: {trigger: ".p_1", start: "top center", end: "bottom top", scrub: true}});
           bg1.to("#bg_1_1", {opacity: 1});
           bg1.to("#bg_1_2", {opacity: 1});
-          bg1.to("#bg_1_3", {opacity: 1});
+          // bg1.to("#bg_1_3", {opacity: 1});
     gsap.to(".bg_2", {opacity: 1, scrollTrigger: {trigger: ".p_1", start: "bottom center", end: "bottom top", scrub: true}})
     gsap.to(".bg_3", {opacity: 1, scrollTrigger: {trigger: ".p_2", start: "bottom center", end: "bottom top", scrub: true}})
     const tlp4 = gsap.timeline({scrollTrigger: {trigger: ".p_4", start: "top center", end: "bottom top", scrub: true}});
@@ -273,7 +273,7 @@
     tlwork.to(".final", {y: "10vh", duration: 2.5}, "-=1.1");
     // tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
     // tlwork.to(".stepwork", {opacity: 0, duration: .1});
-    tlwork.to(".t_3", {y: "-10vh"}, "-=.5");
+    tlwork.to(".t_3", {y: "-10vh", duration: .25}, "-=.5");
     tlwork.to(".final", {scale: 5, opacity: 0, duration: 2}, "-=.35");
     tlwork.to(".s_1", {opacity: 1, scale: 1, duration: 1}, "-=.5");
     tlwork.to(".s_1", {opacity: 0, duration: .5});
