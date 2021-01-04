@@ -27,10 +27,10 @@
 <body>
   <nav>
     <ul>
-      <li><a class="nav-link active" href="#">Home</a></li>
+      <li><a class="nav-link active" href="#">Stefano Curto</a></li>
       <li><a class="nav-link expand" href="#">Art</a></li>
       <li><a class="nav-link" href="#">Music</a></li>
-      <li><a class="nav-link" href="#">About Stefano Curto</a></li>
+      <li><a class="nav-link" href="#">About</a></li>
     </ul>
   </nav>
 
@@ -64,7 +64,7 @@
     <div class="content-exp">
       <div class="hero centered vh100">
         <h1>The journey within oneself</h1>
-        <a href="#playExp" onclick="togglePlay()"><i class="material-icons">play_arrow</i>Play the experience</a>
+        <a id="expButton" href="#playExp" onclick="togglePlay()"><i class="material-icons">play_arrow</i>Play the experience</a>
         <p class="muted"><i class="material-icons">headset</i>Use headphones for a better experience.</p>
         <p class="muted" style="max-width: 40vh">Explore the artistic venture of Stefano Curto through his works and music.</p>
         <i class="material-icons arrow muted" style="padding-top: 16px;">south</i>
@@ -133,7 +133,16 @@
         </div>
 
         <div class="circle final"></div>
+        <div class="slide s_1"></div>
+        <div class="slide s_2"></div>
       </div>
+    </div>
+
+    <div class="costellazioni">
+      <div class="c_1"></div>
+      <div class="c_1"></div>
+      <div class="c_1"></div>
+      <div class="c_1"></div>
     </div>
 
   </div>
@@ -152,7 +161,9 @@
     gsap.registerPlugin(ScrollTrigger);
 
     /* INTRO */
+    gsap.to('#expButton', {boxShadow: "0 0 0 8px white", repeat: -1, duration: 2, yoyo: true})
     gsap.set(".music-exp", {y: "+=150"});
+    gsap.set("#expButton", {boxShadow: "0 0 0 0 white"});
     const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true}});
     tlbg.to(".bg-exp", { width: "120vw", height: "120vw" });
     tlbg.to(".music-exp", {y: 0, zIndex: 1});
@@ -172,12 +183,12 @@
     tlp4.to(".bg_4", {opacity: 0});
 
     /* WORK */
-    gsap.set(".drawing .spicchio, .stepwork, .final", {opacity: 0});
+    gsap.set(".drawing .spicchio, .stepwork, .final, .s_1, .s_2", {opacity: 0});
     gsap.set(".t_1", {top: "110vh"});
     gsap.set(".t_2", {top: "110vh"});
     gsap.set(".final", {scale: 3, y: "-49vh"});
 
-    const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true}});
+    const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
     tlwork.to(".t_1", {top: "50vh", duration: .5});
     tlwork.to(".t_1", {top: "45vh", duration: .5});
@@ -209,12 +220,12 @@
     tlwork.to(".stepwork", {y: "-50vh", duration: 1}, "-=1");
     tlwork.to(".final", {y: "1vh", duration: 1}, "-=1");
     tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
-    
-    
-    // tlwork.to(".stepwork", {scale: 1.5, y: "0", x: "-76px"})
-    // tlwork.to(".final", {opacity: 1, duration: 1});
     tlwork.to(".stepwork", {opacity: 0, duration: .1});
     tlwork.to(".final", {scale: 5, opacity: 0, duration: 1});
+    tlwork.to(".s_1", {opacity: 1, scale: 1, duration: 1}, "-=.5");
+    tlwork.to(".s_1", {opacity: 0, duration: .5});
+    tlwork.to(".s_2", {opacity: 1, scale: 1, duration: 1});
+    tlwork.to(".s_2", {opacity: 0, duration: .5});
 
   </script>
 </body>

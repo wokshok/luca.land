@@ -258,6 +258,10 @@ nav ul li a.expand:hover::after {
   border-radius: 36px;
 }
 
+.hero a:hover {
+  opacity: .8;
+}
+
 .hero a i {
   font-size: 32px;
   padding-right: 8px;
@@ -295,7 +299,7 @@ nav ul li a.expand:hover::after {
 /* WORKS */
 .work {
   position: relative;
-  height: 1200vh;
+  height: 600vh;
   display: flex;
   justify-content: center;
 }
@@ -378,6 +382,25 @@ nav ul li a.expand:hover::after {
   background-size: cover;
 }
 
+.slide {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1.1);
+  transform-origin: center;
+  position: absolute;
+  background-size: cover;
+}
+
+.slide.s_1 {
+  background-image: url('../images/dettaglio_1.png');
+}
+
+.slide.s_2 {
+  background-image: url('../images/dettaglio_2.png');
+}
+
 /* .stepwork, .finalwork {
   width: 81vh;
   height: 81vh;
@@ -395,3 +418,17 @@ nav ul li a.expand:hover::after {
   transform:  translateY(-70vh) scale(2);
   z-index: 200;
 } */
+
+/* COSTELLAZIONI */
+.costellazioni {
+  width: 100%;
+  position: relative;
+  top: -500vh;
+}
+
+.c_1 {
+  background-color: #ccc;
+  height: 100vh;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
