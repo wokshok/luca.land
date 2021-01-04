@@ -388,6 +388,7 @@ nav ul li a.expand:hover::after {
 .circle.final {
   background-image: url('../images/thetart.png');
   background-size: cover;
+  filter: grayscale(1);
 }
 
 .slide {
@@ -434,9 +435,30 @@ nav ul li a.expand:hover::after {
   top: -500vh;
 }
 
-.c_1 {
-  background-color: #ccc;
-  height: 100vh;
-  width: 100%;
-  border-bottom: 1px solid black;
+.costellazioni > div {
+  /* background-color: #121212; */
+  /* height: 70vh; */
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+.costellazioni > div > p {
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60vh;
+  /* position: absolute; */
+  font-weight: 700;
+  font-size: 32px;
+  font-family: 'Jost';
+}
+
+.c_1 {background-image: url('../images/test_costellazione_1.png');}
+.c_2 {background-image: url('../images/test_costellazione_2.png');}
+.c_3 {background-image: url('../images/test_costellazione_3.png');}
+

@@ -143,10 +143,16 @@
     </div>
 
     <div class="costellazioni">
-      <div class="c_1"></div>
-      <div class="c_1"></div>
-      <div class="c_1"></div>
-      <div class="c_1"></div>
+      <div class="c_1">
+        <p class="title">THETart</p>
+      </div>
+      <div class="c_2">
+        <p class="title">SpazioBAROCCO</p>
+      </div>
+      <div class="c_3">
+        <p class="title">Evolution-Involution</p>
+      </div>
+      <div class="c_4"></div>
     </div>
 
   </div>
@@ -193,7 +199,7 @@
     gsap.set(".drawing .spicchio, .stepwork, .s_1, .s_2", {opacity: 0});
     gsap.set(".t_1", {top: "110vh"});
     gsap.set(".t_2", {top: "110vh"});
-    gsap.set(".final", {scale: 1, y: "150vh"});
+    gsap.set(".final", {scale: 1.5, y: "150vh"});
 
     const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
@@ -228,7 +234,7 @@
     tlwork.to(".t_2", {top: "-10vh", duration: .5});
     tlwork.to(".stepwork", {y: "-200vh", duration: .5}, "-=.5");
 
-    tlwork.to(".final", {y: "10vh", scale: 2, duration: 2.5}, "-=1.1");
+    tlwork.to(".final", {y: "10vh", duration: 2.5}, "-=1.1");
     // tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
     // tlwork.to(".stepwork", {opacity: 0, duration: .1});
     tlwork.to(".final", {scale: 5, opacity: 0, duration: 2}, "-=.35");
