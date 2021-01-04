@@ -190,45 +190,48 @@
     tlp4.to(".bg_4", {opacity: 0});
 
     /* WORK */
-    gsap.set(".drawing .spicchio, .stepwork, .final, .s_1, .s_2", {opacity: 0});
+    gsap.set(".drawing .spicchio, .stepwork, .s_1, .s_2", {opacity: 0});
     gsap.set(".t_1", {top: "110vh"});
     gsap.set(".t_2", {top: "110vh"});
-    gsap.set(".final", {scale: 3, y: "-49vh"});
+    gsap.set(".final", {scale: 1, y: "150vh"});
 
     const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
     tlwork.to(".t_1", {top: "50vh", duration: .5});
-    tlwork.to(".t_1", {top: "45vh", duration: .5});
+    tlwork.to(".t_1", {top: "45vh", duration: .6});
     tlwork.to(".t_1", {top: "-10vh", duration: .5});
-    tlwork.to(".s2", {opacity: 1, duration: .1}, "-=1.4");
-    tlwork.to(".s3", {opacity: 1, duration: .1}, "-=1.3");
-    tlwork.to(".s4", {opacity: 1, duration: .1}, "-=1.2");
-    tlwork.to(".s5", {opacity: 1, duration: .1}, "-=1.1");
-    tlwork.to(".s6", {opacity: 1, duration: .1}, "-=1");
-    tlwork.to(".s7", {opacity: 1, duration: .1}, "-=.9");
-    tlwork.to(".s8", {opacity: 1, duration: .1}, "-=.8");
-    tlwork.to(".s9", {opacity: 1, duration: .1}, "-=.7");
-    tlwork.to(".s10", {opacity: 1, duration: .1}, "-=.6");
-    tlwork.to(".s11", {opacity: 1, duration: .1}, "-=.5");
-    tlwork.to(".s12", {opacity: 1, duration: .1}, "-=.4");
-    tlwork.to(".s13", {opacity: 1, duration: .1}, "-=.3");
-    tlwork.to(".s14", {opacity: 1, duration: .1}, "-=.2");
-    tlwork.to(".s15", {opacity: 1, duration: .1}, "-=.1");
-    tlwork.to(".s16", {opacity: 1, duration: .1});
-    tlwork.to(".s17", {opacity: 1, duration: .1});
-    tlwork.to(".s18", {opacity: 1, duration: .1});
+    tlwork.to(".s2", {opacity: 1, duration: .1}, "-=1.7");
+    tlwork.to(".s3", {opacity: 1, duration: .1}, "-=1.6");
+    tlwork.to(".s4", {opacity: 1, duration: .1}, "-=1.5");
+    tlwork.to(".s5", {opacity: 1, duration: .1}, "-=1.4");
+    tlwork.to(".s6", {opacity: 1, duration: .1}, "-=1.3");
+    tlwork.to(".s7", {opacity: 1, duration: .1}, "-=1.2");
+    tlwork.to(".s8", {opacity: 1, duration: .1}, "-=1.1");
+    tlwork.to(".s9", {opacity: 1, duration: .1}, "-=1");
+    tlwork.to(".s10", {opacity: 1, duration: .1}, "-=.9");
+    tlwork.to(".s11", {opacity: 1, duration: .1}, "-=.8");
+    tlwork.to(".s12", {opacity: 1, duration: .1}, "-=.7");
+    tlwork.to(".s13", {opacity: 1, duration: .1}, "-=.6");
+    tlwork.to(".s14", {opacity: 1, duration: .1}, "-=.5");
+    tlwork.to(".s15", {opacity: 1, duration: .1}, "-=.4");
+    tlwork.to(".s16", {opacity: 1, duration: .1}, "-=.3");
+    tlwork.to(".s17", {opacity: 1, duration: .1}, "-=.2");
+    tlwork.to(".s18", {opacity: 1, duration: .1}, "-=.1");
 
-    tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-135px"})
+    tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-135px"})  
+    tlwork.to(".t_2", {top: "80vh", duration: .5});
+    tlwork.to(".t_2", {top: "75vh", duration: .2});
+
     tlwork.to(".stepwork", {opacity: 1, duration: 1});
     tlwork.to(".drawing", {opacity: 0, duration: .1});
-    tlwork.to(".t_2", {top: "50vh", duration: .5}, "-=1");
-    tlwork.to(".t_2", {top: "45vh", duration: .2}), "-=.9";
-    tlwork.to(".t_2", {top: "-10vh", duration: .5}), "-=.8";
-    tlwork.to(".stepwork", {y: "-50vh", duration: 1}, "-=1");
-    tlwork.to(".final", {y: "1vh", duration: 1}, "-=1");
-    tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
-    tlwork.to(".stepwork", {opacity: 0, duration: .1});
-    tlwork.to(".final", {scale: 5, opacity: 0, duration: 1});
+
+    tlwork.to(".t_2", {top: "-10vh", duration: .5});
+    tlwork.to(".stepwork", {y: "-200vh", duration: .5}, "-=.5");
+
+    tlwork.to(".final", {y: "10vh", scale: 2, duration: 2.5}, "-=1.1");
+    // tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
+    // tlwork.to(".stepwork", {opacity: 0, duration: .1});
+    tlwork.to(".final", {scale: 5, opacity: 0, duration: 2}, "-=.35");
     tlwork.to(".s_1", {opacity: 1, scale: 1, duration: 1}, "-=.5");
     tlwork.to(".s_1", {opacity: 0, duration: .5});
     tlwork.to(".s_2", {opacity: 1, scale: 1, duration: 1});

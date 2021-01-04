@@ -290,7 +290,7 @@ nav ul li a.expand:hover::after {
 
 /* NARRATIVE */
 .suggestions {
-  margin-bottom: 50vh;
+  /* margin-bottom: 50vh; */
 }
 
 .p_1, .p_2, .p_3, .p_4 {
@@ -395,7 +395,7 @@ nav ul li a.expand:hover::after {
   height: 100vh;
   margin: 0 auto;
   left: 50%;
-  transform: translate(-50%, 0) scale(1.1);
+  transform: translate(-50%, 0) scale(1.01);
   transform-origin: center;
   position: absolute;
   background-size: cover;
