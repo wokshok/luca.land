@@ -439,7 +439,7 @@ nav ul li a.expand:hover::after {
   /* background-color: #121212; */
   /* height: 70vh; */
   width: 70%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   background-position: center;
   background-size: contain;
@@ -452,13 +452,14 @@ nav ul li a.expand:hover::after {
   justify-content: center;
   align-items: center;
   padding-top: 60vh;
+  margin-bottom: 20vh;
   /* position: absolute; */
   font-weight: 700;
   font-size: 32px;
   font-family: 'Jost';
 }
 
-.c_1 {background-image: url('../images/test_costellazione_1.png');}
-.c_2 {background-image: url('../images/test_costellazione_2.png');}
-.c_3 {background-image: url('../images/test_costellazione_3.png');}
+.c_1 {background-image: url('../images/costellazioni-02.png');}
+.c_2 {background-image: url('../images/costellazioni-03.png');}
+.c_3 {background-image: url('../images/costellazioni-04.png');}
 
