@@ -36,7 +36,11 @@
 
   <div class="experience">
     <div class="bg-exp">
-      <div class="bg_1"></div>
+      <div class="bg_1">
+        <div id="bg_1_1"></div>
+        <div id="bg_1_2"></div>
+        <div id="bg_1_3"></div>
+      </div>
       <div class="bg_2"></div>
       <div class="bg_3"></div>
       <div class="bg_4"></div>
@@ -171,11 +175,14 @@
     /* SUGGESTIONS AND BACKGROUND */
     gsap.to(".p_1", {scrollTrigger: {trigger: ".p_1", start: "top top", end: "bottom top"}});
     gsap.to(".p_2", {scrollTrigger: {trigger: ".p_2", start: "top top", end: "bottom top"}});
-    gsap.to(".p_3", {letterSpacing: "16px", opacity: "0", scrollTrigger: {trigger: ".p_3", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true, anticipatePin: .5}});
+    gsap.to(".p_3", {letterSpacing: "16px", opacity: "0", scrollTrigger: {trigger: ".p_3", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: false, anticipatePin: .5}});
     gsap.to(".p_4", {scrollTrigger: {trigger: ".p_4", start: "top top", end: "bottom top", scrub: true}});
 
-    gsap.set(".bg-exp > div", {opacity: 0});
-    gsap.to(".bg_1", {opacity: 1, scrollTrigger: {trigger: ".hero", start: "bottom center", end: "bottom top", scrub: true}});
+    gsap.set(".bg_1 > div, .bg_2, .bg_3, .bg_4", {opacity: 0});
+    const bg1 = gsap.timeline({scrollTrigger: {trigger: ".p_1", start: "top center", end: "bottom top", scrub: true}});
+          bg1.to("#bg_1_1", {opacity: 1});
+          bg1.to("#bg_1_2", {opacity: 1});
+          bg1.to("#bg_1_3", {opacity: 1});
     gsap.to(".bg_2", {opacity: 1, scrollTrigger: {trigger: ".p_1", start: "bottom center", end: "bottom top", scrub: true}})
     gsap.to(".bg_3", {opacity: 1, scrollTrigger: {trigger: ".p_2", start: "bottom center", end: "bottom top", scrub: true}})
     const tlp4 = gsap.timeline({scrollTrigger: {trigger: ".p_4", start: "top center", end: "bottom top", scrub: true}});
