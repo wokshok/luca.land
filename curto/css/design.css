@@ -331,10 +331,11 @@ nav ul li a.expand:hover::after {
   left: 50%;
   z-index: 100;
   text-shadow: 0 0 16px black;
+  font-size: 4rem;
 }
 
 .circle {
-  transform: scale(1.5) translateY(100px) translateX(-10px);
+  transform: scale(1.5) translateY(100px) translateX(0);
   transform-origin: center;
   position: absolute;
   height: 502px;
@@ -466,6 +467,9 @@ nav ul li a.expand:hover::after {
   opacity: .7;
   justify-content: center;
   font-size: 16px;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .costellazioni button {
@@ -478,7 +482,7 @@ nav ul li a.expand:hover::after {
   line-height: 44px;
   text-transform: none;
   padding: 0 20px;
-  margin: 36px auto 120px;
+  margin: 36px auto 200px;
   letter-spacing: 0;
   font-size: 18px;
   outline: 0;

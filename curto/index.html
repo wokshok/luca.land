@@ -109,8 +109,9 @@
         </div>
 
         <div class="testi">
-          <h1 class="t_1">Lorem ipsum dolor sit amet</h1>
-          <h1 class="t_2">Lorem ipsumetto dolor sit amet</h1>         
+          <h1 class="t_1">This is a story that reapets itself over and over</h1>
+          <h1 class="t_2">To get ready day by day</h1>  
+          <h1 class="t_3">For receiving the light</h1>       
         </div>
 
         <div class="spicchi stepwork">
@@ -146,19 +147,19 @@
       <div class="c_1">
         <img src="images/costellazioni-02.png">
         <p class="title">THETart</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet</p>
+        <p class="subtitle">Meditation inspires this journey. Starting from its experience to explore the depths of the mind. And remains there, being born again every day.</p>
         <button>Discover more</button>
       </div>
       <div class="c_2">
         <img src="images/costellazioni-03.png">
         <p class="title">SpazioBAROCCO</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet</p>
+        <p class="subtitle">The past lives in the brightness of our eyes. Spazio barocco is in the time between open and closed eyes.</p>
         <button>Discover more</button>
       </div>
       <div class="c_3">
         <img src="images/costellazioni-04.png">
         <p class="title">Evolution-Involution</p>
-        <p class="subtitle">Lorem ipsum dolor sit amet</p>
+        <p class="subtitle">Every thought starts from the center of the opera. Revolving around it, studying it, deeply understanding it and, at last, coming back to its center.</p>
         <button>Discover more</button>
       </div>
       <div class="c_4"></div>
@@ -168,15 +169,15 @@
       <div class="about-stefano">
         <img src="images/about.png">
         <div class="text">
-          <p class="title">About Stefano</p>
-          <p class="subtitle">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo.</p>
+          <p class="title">About Stefano Curto</p>
+          <p class="subtitle">Through meditation you can seek yourself and find that fulcrum where our essence is burning the big bang of yin and yang dark and bright spirits.</p>
           <button>Discover more</button>
         </div>
       </div>
       <div class="about-music">
         <img src="images/about-music.png">
         <div class="text">
-          <p class="title">Music as a muse</p>
+          <p class="title">Stefano as Stenox</p>
           <p class="subtitle">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
           <button>Discover more</button>
           <button class="secondary">Listen on CDbaby</button>
@@ -230,6 +231,7 @@
     gsap.set(".drawing .spicchio, .stepwork, .s_1, .s_2", {opacity: 0});
     gsap.set(".t_1", {top: "110vh"});
     gsap.set(".t_2", {top: "110vh"});
+    gsap.set(".t_3", {top: "110vh"});
     gsap.set(".final", {scale: 1.5, y: "150vh"});
 
     const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
@@ -261,14 +263,17 @@
 
     tlwork.to(".stepwork", {opacity: 1, duration: 1});
     tlwork.to(".drawing", {opacity: 0, duration: .1});
+    tlwork.to(".t_3", {top: "85vh", duration: .5});
+    tlwork.to(".t_3", {top: "80vh", duration: .2});
 
     tlwork.to(".t_2", {top: "-10vh", duration: .5});
+    tlwork.to(".t_3", {top: "5vh", duration: .5}, "-=.5");
     tlwork.to(".stepwork", {y: "-200vh", duration: .5}, "-=.5");
 
     tlwork.to(".final", {y: "10vh", duration: 2.5}, "-=1.1");
     // tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
     // tlwork.to(".stepwork", {opacity: 0, duration: .1});
-    tlwork.to(".final", {scale: 5, opacity: 0, duration: 2}, "-=.35");
+    tlwork.to(".final, .t_3", {scale: 5, opacity: 0, duration: 2}, "-=.35");
     tlwork.to(".s_1", {opacity: 1, scale: 1, duration: 1}, "-=.5");
     tlwork.to(".s_1", {opacity: 0, duration: .5});
     tlwork.to(".s_2", {opacity: 1, scale: 1, duration: 1});
