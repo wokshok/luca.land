@@ -110,7 +110,7 @@
 
         <div class="testi">
           <h1 class="t_0">One story</h1>
-          <h1 class="t_1">that reapets itself over and over</h1>
+          <h1 class="t_1">that repeats itself over and over</h1>
           <h1 class="t_2">to get ready day by day</h1>  
           <h1 class="t_3">for receiving the light</h1>       
         </div>
@@ -251,6 +251,7 @@
     gsap.set(".drawing .spicchio, .stepwork, .s_0, .s_1, .s_2", {opacity: 0});
     gsap.set(".t_0, .t_1, .t_2, .t_3, .s_0", {top: "110vh"});
     gsap.set(".final", {scale: 1.5, y: "150vh"});
+    gsap.set(".drawing, .stepwork", {x: "-6vh"})  
 
     const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "+=" + (window.innerHeight * 10), scrub: true, pin: ".work", pinSpacing: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
@@ -281,7 +282,7 @@
     tlwork.to(".t_1", {top: "45vh", duration: .6}, "-=.4");
     tlwork.to(".t_1", {top: "-10vh", duration: .5}, "-=.3");
 
-    tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-135px"})  
+    tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-14vh"})  
     tlwork.to(".t_2", {top: "80vh", duration: .5});
     tlwork.to(".t_2", {top: "75vh", duration: .2});
 
@@ -295,7 +296,7 @@
     tlwork.to(".stepwork", {y: "-200vh", duration: .5}, "-=.5");
 
     tlwork.to(".final", {y: "10vh", duration: 2.5}, "-=1.1");
-    tlwork.to(".t_3", {y: "-10vh", duration: .25}, "-=.5");
+    tlwork.to(".t_3", {y: "-15vh", duration: .25}, "-=.5");
     tlwork.to(".final", {scale: 5, duration: 2}, "-=.35");
     tlwork.to(".s_0", {opacity: 1, top: "-50vh", duration: 1}, "-=2");
     tlwork.to(".final", {opacity: 0, duration: .1});

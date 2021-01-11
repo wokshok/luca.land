@@ -348,8 +348,8 @@ nav ul li a.expand:hover::after {
   transform: rotate(0deg);
   transform-origin: center bottom;
 
-  width: 87px;
-  height: 250px;
+  width: calc(25vh * 0.348);
+  height: 25vh;
 
   position: absolute;
   display: block;
@@ -413,10 +413,12 @@ nav ul li a.expand:hover::after {
 
 .slide.s_1 {
   background-image: url('../images/dettaglio_1.jpg');
+  background-position: center;
 }
 
 .slide.s_2 {
   background-image: url('../images/dettaglio_2.png');
+  background-position: center;
 }
 
 /* .stepwork, .finalwork {
