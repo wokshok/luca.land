@@ -109,9 +109,10 @@
         </div>
 
         <div class="testi">
-          <h1 class="t_1">This is a story that reapets itself over and over</h1>
-          <h1 class="t_2">To get ready day by day</h1>  
-          <h1 class="t_3">For receiving the light</h1>       
+          <h1 class="t_0">One story</h1>
+          <h1 class="t_1">that reapets itself over and over</h1>
+          <h1 class="t_2">to get ready day by day</h1>  
+          <h1 class="t_3">for receiving the light</h1>       
         </div>
 
         <div class="spicchi stepwork">
@@ -138,34 +139,44 @@
         </div>
 
         <div class="circle final"></div>
+        <div class="slide s_0"></div>
         <div class="slide s_1"></div>
         <div class="slide s_2"></div>
       </div>
     </div>
 
     <div class="costellazioni">
+      <h1>Discover all the works</h1>
       <div class="c_1">
-        <img src="images/costellazioni-02.png">
+        <img src="images/c_1.png">
         <p class="title">THETart</p>
         <p class="subtitle">Meditation inspires this journey. Starting from its experience to explore the depths of the mind. And remains there, being born again every day.</p>
         <button>Discover more</button>
       </div>
       <div class="c_2">
-        <img src="images/costellazioni-03.png">
+        <img src="images/c_2.png">
         <p class="title">SpazioBAROCCO</p>
         <p class="subtitle">The past lives in the brightness of our eyes. Spazio barocco is in the time between open and closed eyes.</p>
         <button>Discover more</button>
       </div>
       <div class="c_3">
-        <img src="images/costellazioni-04.png">
+        <img src="images/c_3.png">
         <p class="title">Evolution-Involution</p>
         <p class="subtitle">Every thought starts from the center of the opera. Revolving around it, studying it, deeply understanding it and, at last, coming back to its center.</p>
         <button>Discover more</button>
       </div>
-      <div class="c_4"></div>
+      <div class="c_4">
+        <img src="images/c_4.png">
+        <p class="title">Other works</p>
+        <p class="subtitle">Every thought starts from the center of the opera. Revolving around it, studying it, deeply understanding it and, at last, coming back to its center.</p>
+        <button>Discover more</button>
+      </div>
     </div>
 
     <div class="extras">
+      <button>Find Stefano on Instagram</button>
+      <button>Find Stefano on Facebook</button>
+
       <div class="about-stefano">
         <img src="images/about.png">
         <div class="text">
@@ -179,11 +190,18 @@
         <div class="text">
           <p class="title">Stefano as Stenox</p>
           <p class="subtitle">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.</p>
-          <button>Discover more</button>
-          <button class="secondary">Listen on CDbaby</button>
+          
+          <button>Listen on CDbaby</button>
+          <button class="secondary">Discover more</button>
         </div>
       </div>
     </div>
+
+    <footer>
+      <span>© Stefano Curto 2021</span>
+      <a>Privacy policy</a>
+      <a>Cookie policy</a>
+    </footer>
 
   </div>
 
@@ -201,14 +219,16 @@
     gsap.registerPlugin(ScrollTrigger);
 
     /* INTRO */
-    gsap.to('#expButton', {boxShadow: "0 0 0 8px white", repeat: -1, duration: 2, yoyo: true})
+    gsap.to('#expButton', {boxShadow: "0 0 0 8px white", repeat: -1, duration: 1, yoyo: true})
     gsap.set(".music-exp", {y: "+=150"});
     gsap.set("#expButton", {boxShadow: "0 0 0 0 white"});
     const tlbg = gsap.timeline({scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true}});
     tlbg.to(".bg-exp", { width: "120vw", height: "120vw" });
     tlbg.to(".bg-exp", { borderRadius: 0 });
-    tlbg.to(".music-exp", {y: 0, zIndex: 1});
-    tlbg.to(".music-exp", {y: "+=150", scrollTrigger: {trigger: ".work", start: "bottom bottom", end: "bottom top", scrub: true}});
+
+    /* MUSIC */
+    gsap.to(".music-exp", {y: "-=150", zIndex: 1, scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: true}});
+    // gsap.to(".music-exp", {y: "+=150", scrollTrigger: {trigger: ".extras", start: "top bottom", end: "bottom top", scrub: true, markers: true}});
 
     /* SUGGESTIONS AND BACKGROUND */
     gsap.to(".p_1", {scrollTrigger: {trigger: ".p_1", start: "top top", end: "bottom top"}});
@@ -228,34 +248,38 @@
     tlp4.to(".bg_4", {opacity: 0});
 
     /* WORK */
-    gsap.set(".drawing .spicchio, .stepwork, .s_1, .s_2", {opacity: 0});
-    gsap.set(".t_1", {top: "110vh"});
-    gsap.set(".t_2", {top: "110vh"});
-    gsap.set(".t_3", {top: "110vh"});
+    gsap.set(".drawing .spicchio, .stepwork, .s_0, .s_1, .s_2", {opacity: 0});
+    gsap.set(".t_0, .t_1, .t_2, .t_3, .s_0", {top: "110vh"});
     gsap.set(".final", {scale: 1.5, y: "150vh"});
 
-    const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "bottom top", scrub: true, pin: true, pinSpacing: true}});
+    const tlwork = gsap.timeline({scrollTrigger: {trigger: ".work", start: "top top", end: "+=" + (window.innerHeight * 10), scrub: true, pin: ".work", pinSpacing: true}});
     tlwork.to(".s1", {opacity: 1, duration: .5});
-    tlwork.to(".t_1", {top: "50vh", duration: .5});
-    tlwork.to(".t_1", {top: "45vh", duration: .6});
-    tlwork.to(".t_1", {top: "-10vh", duration: .5});
-    tlwork.to(".s2", {opacity: 1, duration: .1}, "-=1.7");
-    tlwork.to(".s3", {opacity: 1, duration: .1}, "-=1.6");
-    tlwork.to(".s4", {opacity: 1, duration: .1}, "-=1.5");
-    tlwork.to(".s5", {opacity: 1, duration: .1}, "-=1.4");
-    tlwork.to(".s6", {opacity: 1, duration: .1}, "-=1.3");
-    tlwork.to(".s7", {opacity: 1, duration: .1}, "-=1.2");
-    tlwork.to(".s8", {opacity: 1, duration: .1}, "-=1.1");
-    tlwork.to(".s9", {opacity: 1, duration: .1}, "-=1");
-    tlwork.to(".s10", {opacity: 1, duration: .1}, "-=.9");
-    tlwork.to(".s11", {opacity: 1, duration: .1}, "-=.8");
-    tlwork.to(".s12", {opacity: 1, duration: .1}, "-=.7");
-    tlwork.to(".s13", {opacity: 1, duration: .1}, "-=.6");
-    tlwork.to(".s14", {opacity: 1, duration: .1}, "-=.5");
-    tlwork.to(".s15", {opacity: 1, duration: .1}, "-=.4");
-    tlwork.to(".s16", {opacity: 1, duration: .1}, "-=.3");
-    tlwork.to(".s17", {opacity: 1, duration: .1}, "-=.2");
-    tlwork.to(".s18", {opacity: 1, duration: .1}, "-=.1");
+
+    tlwork.to(".t_0", {top: "50vh", duration: .5});
+    tlwork.to(".t_0", {top: "45vh", duration: .6});
+    tlwork.to(".t_0", {top: "-10vh", duration: .5});
+
+    tlwork.to(".s2", {opacity: 1, duration: .1});
+    tlwork.to(".s3", {opacity: 1, duration: .1});
+    tlwork.to(".s4", {opacity: 1, duration: .1});
+    tlwork.to(".s5", {opacity: 1, duration: .1});
+    tlwork.to(".s6", {opacity: 1, duration: .1});
+    tlwork.to(".s7", {opacity: 1, duration: .1});
+    tlwork.to(".s8", {opacity: 1, duration: .1});
+    tlwork.to(".s9", {opacity: 1, duration: .1});
+    tlwork.to(".s10", {opacity: 1, duration: .1});
+    tlwork.to(".s11", {opacity: 1, duration: .1});
+    tlwork.to(".s12", {opacity: 1, duration: .1});
+    tlwork.to(".s13", {opacity: 1, duration: .1});
+    tlwork.to(".s14", {opacity: 1, duration: .1});
+    tlwork.to(".s15", {opacity: 1, duration: .1});
+    tlwork.to(".s16", {opacity: 1, duration: .1});
+    tlwork.to(".s17", {opacity: 1, duration: .1});
+    tlwork.to(".s18", {opacity: 1, duration: .1});
+
+    tlwork.to(".t_1", {top: "50vh", duration: .5}, "-=1.5");
+    tlwork.to(".t_1", {top: "45vh", duration: .6}, "-=.4");
+    tlwork.to(".t_1", {top: "-10vh", duration: .5}, "-=.3");
 
     tlwork.to(".drawing, .stepwork", {scale: 3, y: "-100vh", x: "-135px"})  
     tlwork.to(".t_2", {top: "80vh", duration: .5});
@@ -271,14 +295,15 @@
     tlwork.to(".stepwork", {y: "-200vh", duration: .5}, "-=.5");
 
     tlwork.to(".final", {y: "10vh", duration: 2.5}, "-=1.1");
-    // tlwork.to(".final", {opacity: 1, duration: 1}, "-=.5");
-    // tlwork.to(".stepwork", {opacity: 0, duration: .1});
     tlwork.to(".t_3", {y: "-10vh", duration: .25}, "-=.5");
-    tlwork.to(".final", {scale: 5, opacity: 0, duration: 2}, "-=.35");
-    tlwork.to(".s_1", {opacity: 1, scale: 1, duration: 1}, "-=.5");
+    tlwork.to(".final", {scale: 5, duration: 2}, "-=.35");
+    tlwork.to(".s_0", {opacity: 1, top: "-50vh", duration: 1}, "-=2");
+    tlwork.to(".final", {opacity: 0, duration: .1});
+    tlwork.to(".s_1", {opacity: 1, scale: 1, duration: 1}, "-=1");
     tlwork.to(".s_1", {opacity: 0, duration: .5});
     tlwork.to(".s_2", {opacity: 1, scale: 1, duration: 1});
     tlwork.to(".s_2", {opacity: 0, duration: .5});
+    tlwork.to(".music-exp",{autoAlpha: 0, onStart:function(){myAudio.pause()}}, "-=.35");
 
   </script>
 </body>
